@@ -17,9 +17,9 @@ const getCircularReplacer = () => {
 
 function stringify(config) {
   this.Compiler = compiler;
-
+  compiler.handlers = { ...serialize.handlers };
   function compiler(tree) {
     if (config.toJSON) return JSON.stringify(tree, getCircularReplacer(), 2);
-    return serialize({}, tree);
+    return serialize({ handlers: compiler.handlers }, tree);
   }
 }

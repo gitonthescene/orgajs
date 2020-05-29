@@ -9,7 +9,7 @@ function serializeText(ctx, node, index, parent) {
   var samplerow;
   rows.forEach((row) => {
     if (row.type === "table.row") {
-      samplerow = row.children.map((cell) => all({}, cell));
+      samplerow = row.children.map((cell) => all(ctx, cell));
       contents.push(samplerow);
     } else contents.push("separator");
   });
