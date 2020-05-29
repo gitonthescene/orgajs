@@ -1,0 +1,20 @@
+{
+  "name": "orga-stringify",
+  "version": "1.8.15",
+  "description": "orga compiler for unifiedjs",
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "author": "Douglas Mennella <dougmabroad@yahoo.com>",
+  "license": "MIT",
+  "repository": "https://github.com/orgapp/orgajs/tree/master/packages/orga-stringify",
+  "scripts": {
+    "build": "npm run clean && mkdir ./lib && cp ./src/*.js ./lib",
+    "prepare": "cross-env NODE_ENV=production npm run build",
+    "clean": "rm -rf ./lib"
+  },
+  "dependencies": {
+    "orga": "^1.8.15"
+  }
+}
