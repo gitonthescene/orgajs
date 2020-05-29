@@ -1,11 +1,5 @@
 #+TITLE: orga-stringify
 
-#+HTML: <p align="center"><img src="assets/logo.png" width="300" height="300"/></p>
-
-#+BEGIN_QUOTE
-org-mode with JavaScript
-#+END_QUOTE
-
 This package implements [[https://unifiedjs.com/explore/package/unified/#processorstringifynode-file][stringify processor]] to be used in the [[https://unifiedjs.com/][unified]] framework.  This takes in an
 oast (Orga AST) tree and compiles it to a string.
 
