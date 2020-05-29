@@ -19,6 +19,7 @@ class OrgaParser implements orga.Parser {
   _cel: number
   processor: any
   cursor: number
+  linecursor: number
   lines: string[]
   tokens: any[]
 
@@ -35,7 +36,8 @@ class OrgaParser implements orga.Parser {
     const self = this
     const document = new Node('root').with({ meta: {} })
     self.cursor = -1
-    self.lines = text.split('\n') // TODO: more robust lines?
+    self.linecursor = -1
+    self.lines = text.split(/\r\n|\n/) // TODO: more robust lines?
       self.tokens = []
     return this.parseSection(document)
   }
@@ -46,7 +48,7 @@ class OrgaParser implements orga.Parser {
   }
 
   hasNext(): boolean {
-    return this.prefix.length > 0 || this.cursor + 1 < this.lines.length
+    return this.prefix.length > 0 || this.cursor + 1 < this.tokens.length || this.linecursor + 1 < this.lines.length;
   }
 
   next(): any {
@@ -61,12 +63,13 @@ class OrgaParser implements orga.Parser {
 
   getToken(index: number) {
     const self = this
-    if (index >= self.lines.length) { return undefined }
-    if (index >= self.tokens.length) {
-      const start = self.tokens.length
-      for (let i = start; i <= index; i++) {
-        self.tokens.push(self.lexer.tokenize(self.lines[i]))
-      }
+    if ( index >= self.tokens.length && self.linecursor + 1 >= self.lines.length) { return undefined }
+    while (self.linecursor < self.lines.length && index >= self.tokens.length) {
+      let nextLine = self.lines[++self.linecursor];
+      if (nextLine === undefined) return undefined;
+      let newToken = self.lexer.tokenize(nextLine);
+      if (newToken) self.tokens.push(newToken)
+      self.tokens.push({name: `blank`, raw: '\n'}); // represents the EOL
     }
     return self.tokens[index]
   }

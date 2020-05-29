@@ -9,12 +9,14 @@ function parsePlanning() {
 
 function parseDrawer() {
   const begin = this.next()
+  eatNewline(this)
   const lines = []
   while (this.hasNext()) {
     const t = this.next()
     if ( t.name === `headline` ) { return undefined }
     if (t.name === `drawer.end` ) {
-      return new Node('drawer').with({ name: begin.data.type, value: lines.join(`\n`) })
+      eatNewline(this)
+      return new Node('drawer').with({ name: begin.data.type, value: lines.join(``) })
     }
     lines.push(t.raw)
   }
@@ -27,6 +29,15 @@ function parseTimestamp() {
   return new Node('timestamp').with(token.data)
 }
 
+function eatNewline(self) {
+  // Eat trailing new line
+  // @@DAM how do we reach the end of the stream?
+  var token = self.peek()
+  if (token && token.name === `blank`) {
+    self.consume()
+  }
+}
+
 function process(token, section) {
   if (section.type === `footnote.definition`) return section // headline breaks footnote
   const { level, keyword, priority, tags, content } = token.data
@@ -37,13 +48,16 @@ function process(token, section) {
   const headline = new Node('headline', text).with({
     level, keyword, priority, tags
   })
+  eatNewline(this)
   const planning = this.tryTo(parsePlanning)
   if (planning) {
     headline.push(planning)
+    eatNewline(this)
   }
   const timestamp = this.tryTo(parseTimestamp)
   if (timestamp) {
     headline.push(timestamp)
+    eatNewline(this)
   }
 
   while (this.hasNext() && this.peek().name === `drawer.begin`) {

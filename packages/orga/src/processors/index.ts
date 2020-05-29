@@ -15,6 +15,7 @@ module.exports = {
   "block.begin": block,
   "list.item": list,
   "table.row": table,
+  "table.separator": table,
   horizontalRule,
   footnote,
   blank,

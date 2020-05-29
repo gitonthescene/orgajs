@@ -9,8 +9,12 @@ function process(token, section) {
     const table = new Node(`table`)
     while (self.hasNext()) {
       const token = self.peek()
-      if ( !token.name.startsWith(`table.`) ) break
+      if ( !token.name.startsWith(`table.`) && token.name !== `blank` ) break
       self.consume()
+      if (token.name === `blank`) {
+        table.push(new Node(`whitespace`).with({value: token.raw}))
+        continue
+      }
       if (token.name === `table.separator`) {
         table.push(new Node(`table.separator`))
         continue

@@ -25,12 +25,17 @@ export default function(token, section: Node): Node {
     }
     while (self.hasNext()) {
       const { name, raw } = self.peek()
-      if (name !== `line`) break
-      const lineIndent = raw.search(/\S/)
-      if (lineIndent <= indent) break
-      lines.push(self.next().raw.trim())
+      if (name === `blank`) {
+         // @@DAM how do we reach the end of the stream?
+         var blank = self.next()
+         if ( blank ) lines.push(blank.raw);
+      } else if (name === `line`) {
+        const lineIndent = raw.search(/\S/)
+        if (lineIndent <= indent) break
+        lines.push(self.next().raw.trimLeft())
+      } else break;
     }
-    item.push(inlineParse(lines.join(` `)))
+    item.push(inlineParse(lines.join(``)))
     return item
   }
 

@@ -151,11 +151,11 @@ export default class Lexer {
         data: post(m, this.options) }
     }
 
-    const trimed = input.trim()
-    if (trimed === '') {
+    const trimmed = input.trim()
+    if (input !== '' && trimmed === '') {
       return { name: `blank`, raw: input }
     }
-
+    if (input === '') return undefined;
     return { name: `line`, raw: input }
   }
 

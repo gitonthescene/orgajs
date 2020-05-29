@@ -7,9 +7,13 @@ function process(token, section) {
   while (this.hasNext()) {
     const token = this.peek()
     // also eats broken block/drawer ends
-    if (![`line`, `block.end`, `drawer.end`].includes(token.name)) break
+    if (![`line`, `block.end`, `drawer.end`, `blank`].includes(token.name)) break
+
+    // @DAM This checking for two blank rows should be a utility to be used whereever blanks are processed.
+    this._cel = token.name === `blank` ? this._cel+1 : 0;
+    if (section.type === `footnote.definition` && this._cel > 2) break    
     this.consume()
-    push(token.raw.trim())
+    push(token.raw)
   }
   section.push(new Node(`paragraph`, nodes))
 
@@ -25,7 +29,7 @@ function process(token, section) {
         newNodes[0].type === `text`) {
       const n = newNodes.shift()
       const last = nodes.pop()
-      last.value = `${last.value} ${n.value}`
+      last.value = `${last.value}${n.value}`
       nodes.push(last)
     }
 
