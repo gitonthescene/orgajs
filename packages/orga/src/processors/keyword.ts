@@ -41,13 +41,7 @@ function process(token, section) {
     break
   }
   this.consume()
-  token = this.peek()
-  // Eat trailing new line
-  // @@DAM how do we reach the end of the stream?
-  if (token && token.name === `blank`) {
-    this.consume();
-    token = this.peek();
-  }
+  this.eatNewline()
   return this.parseSection(section)
 }
 

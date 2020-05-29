@@ -87,6 +87,18 @@ class OrgaParser implements orga.Parser {
     return result
   }
 
+  eatNewline() {
+    // Eat trailing new line
+    // @@DAM how do we reach the end of the stream?
+    var token = this.peek()
+    if (token && token.name === `blank` && token.raw === `\n`) {
+      this.consume()
+      return token.raw
+    }
+    return undefined
+  }
+
+
 // Total Awareness -- according to Ross
   unagi(element) {
     if (Object.keys(this._aks).length === 0) return element

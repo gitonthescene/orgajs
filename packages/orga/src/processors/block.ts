@@ -8,13 +8,7 @@ function parseBlock() {
   while (this.hasNext()) {
     const t = this.next()
     if ( t.name === `headline` ) { return undefined }
-    // @@DAM how do we reach the end of the stream?
-    var nxt = this.peek()
-    var eol = '';
-    if (nxt && nxt.name === `blank`) {
-        eol = nxt.raw
-        this.consume(); // chew up new line
-    }
+    var eol = this.eatNewline() || '';
     if (t.name === `block.end` && t.data.type.toUpperCase() === type.toUpperCase() ) {
       if (t.data.type.toUpperCase() === `EXPORT`) {
         const format = params[0]

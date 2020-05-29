@@ -26,9 +26,9 @@ export default function(token, section: Node): Node {
     while (self.hasNext()) {
       const { name, raw } = self.peek()
       if (name === `blank`) {
-         // @@DAM how do we reach the end of the stream?
-         var blank = self.next()
-         if ( blank ) lines.push(blank.raw);
+        // @@DAM how do we reach the end of the stream?
+        var blank = self.next()
+        if ( blank ) lines.push(blank.raw);
       } else if (name === `line`) {
         const lineIndent = raw.search(/\S/)
         if (lineIndent <= indent) break

@@ -9,8 +9,8 @@ function process(token, section) {
     // also eats broken block/drawer ends
     if (![`line`, `block.end`, `drawer.end`, `blank`].includes(token.name)) break
 
-    // @DAM This checking for two blank rows should be a utility to be used whereever blanks are processed.
-    this._cel = token.name === `blank` ? this._cel+1 : 0;
+    // Check for two successive blank lines.  ( @@DAM: Do lines containing empty space count? )
+    this._cel = (token.name === `blank` && token.raw === `\n`) ? this._cel+1 : 0;
     if (section.type === `footnote.definition` && this._cel > 2) break    
     this.consume()
     push(token.raw)
