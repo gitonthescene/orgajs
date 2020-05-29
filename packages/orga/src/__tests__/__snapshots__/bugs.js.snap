@@ -4,6 +4,13 @@ exports[`bug fixes fixes issue #5 1`] = `
 Node {
   "children": Array [
     Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
       "children": Array [
         Node {
           "children": Array [
@@ -43,6 +50,13 @@ Node {
           "priority": undefined,
           "tags": Array [],
           "type": "headline",
+        },
+        Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
         },
       ],
       "level": 1,

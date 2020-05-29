@@ -4,6 +4,20 @@ exports[`Parser can handle TODO keywords 1`] = `
 Node {
   "children": Array [
     Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
       "children": Array [
         Node {
           "children": Array [
@@ -20,6 +34,13 @@ Node {
           "priority": undefined,
           "tags": Array [],
           "type": "headline",
+        },
+        Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
         },
       ],
       "level": 1,
@@ -42,6 +63,13 @@ exports[`Parser can handle affiliated keywords 1`] = `
 Node {
   "children": Array [
     Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
       "attributes": Object {
         "NAME": "code_block",
       },
@@ -52,7 +80,15 @@ Node {
       ],
       "parent": [Circular],
       "type": "block",
-      "value": "console.log('hello world.')",
+      "value": "console.log('hello world.')
+",
+    },
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
     },
   ],
   "meta": Object {},
@@ -63,6 +99,13 @@ Node {
 exports[`Parser can handle blocks 1`] = `
 Node {
   "children": Array [
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
     Node {
       "children": Array [
         Node {
@@ -90,7 +133,15 @@ Node {
           "parent": [Circular],
           "type": "block",
           "value": "console.log('hello')
-console.log('world')",
+console.log('world')
+",
+        },
+        Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
         },
       ],
       "level": 1,
@@ -106,6 +157,13 @@ console.log('world')",
 exports[`Parser can handle broken blocks 1`] = `
 Node {
   "children": Array [
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
     Node {
       "children": Array [
         Node {
@@ -130,7 +188,11 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "#+BEGIN_SRC javascript console.log('hello') console.log('world')",
+              "value": "#+BEGIN_SRC javascript
+console.log('hello')
+console.log('world')
+
+",
             },
           ],
           "parent": [Circular],
@@ -151,6 +213,13 @@ exports[`Parser can handle broken blocks 2`] = `
 Node {
   "children": Array [
     Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
       "children": Array [
         Node {
           "children": Array [
@@ -174,7 +243,11 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "console.log('hello') console.log('world') #+END_SRC",
+              "value": "console.log('hello')
+console.log('world')
+#+END_SRC
+
+",
             },
           ],
           "parent": [Circular],
@@ -195,6 +268,13 @@ exports[`Parser can handle broken drawers 1`] = `
 Node {
   "children": Array [
     Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
       "children": Array [
         Node {
           "children": Array [
@@ -218,19 +298,13 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": ":PROPERTIES: key: value key: value",
-            },
-          ],
-          "parent": [Circular],
-          "type": "paragraph",
-        },
-        Node {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "Paragraph",
+              "value": ":PROPERTIES:
+key: value
+key: value
+
+Paragraph
+
+",
             },
           ],
           "parent": [Circular],
@@ -250,39 +324,12 @@ Node {
 exports[`Parser can handle broken multi line list item 1`] = `
 Node {
   "children": Array [
-    List {
-      "children": Array [
-        ListItem {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "Apple is an American multinational technology company headquartered in Cupertino, California that designs, develops, and sells consumer electronics,",
-            },
-          ],
-          "ordered": false,
-          "parent": [Circular],
-          "tag": undefined,
-          "type": "list.item",
-        },
-      ],
-      "descriptive": false,
-      "ordered": false,
-      "parent": [Circular],
-      "type": "list",
-    },
     Node {
-      "children": Array [
-        Node {
-          "children": Array [],
-          "parent": [Circular],
-          "type": "text",
-          "value": "computer software, and online services.",
-        },
-      ],
+      "children": Array [],
       "parent": [Circular],
-      "type": "paragraph",
+      "type": "whitespace",
+      "value": "
+",
     },
     List {
       "children": Array [
@@ -292,7 +339,11 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "Orange",
+              "value": "Apple is an American multinational technology company headquartered in
+Cupertino, California that designs, develops, and sells consumer electronics,
+
+computer software, and online services.
+",
             },
           ],
           "ordered": false,
@@ -306,7 +357,24 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "Banana",
+              "value": "Orange
+",
+            },
+          ],
+          "ordered": false,
+          "parent": [Circular],
+          "tag": undefined,
+          "type": "list.item",
+        },
+        ListItem {
+          "children": Array [
+            Node {
+              "children": Array [],
+              "parent": [Circular],
+              "type": "text",
+              "value": "Banana
+
+",
             },
           ],
           "ordered": false,
@@ -329,6 +397,13 @@ Node {
 exports[`Parser can handle broken multi line list item 2`] = `
 Node {
   "children": Array [
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
     List {
       "children": Array [
         ListItem {
@@ -337,7 +412,8 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "Apple is an American multinational technology company headquartered in",
+              "value": "Apple is an American multinational technology company headquartered in
+",
             },
           ],
           "ordered": false,
@@ -357,7 +433,9 @@ Node {
           "children": Array [],
           "parent": [Circular],
           "type": "text",
-          "value": "Cupertino, California that designs, develops, and sells consumer electronics, computer software, and online services.",
+          "value": "Cupertino, California that designs, develops, and sells consumer electronics,
+  computer software, and online services.
+",
         },
       ],
       "parent": [Circular],
@@ -371,7 +449,8 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "Orange",
+              "value": "Orange
+",
             },
           ],
           "ordered": false,
@@ -385,7 +464,9 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "Banana",
+              "value": "Banana
+
+",
             },
           ],
           "ordered": false,
@@ -409,6 +490,13 @@ exports[`Parser can handle complex footnote 1`] = `
 Node {
   "children": Array [
     Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
       "children": Array [
         Node {
           "children": Array [
@@ -416,7 +504,8 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "Content of the footnote.",
+              "value": "Content of the footnote.
+",
             },
           ],
           "parent": [Circular],
@@ -430,7 +519,15 @@ Node {
           ],
           "parent": [Circular],
           "type": "block",
-          "value": "console.log('footnote with code block')",
+          "value": "console.log('footnote with code block')
+",
+        },
+        Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
         },
       ],
       "label": "1",
@@ -446,6 +543,13 @@ Node {
 exports[`Parser can handle descriptive list 1`] = `
 Node {
   "children": Array [
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
     List {
       "children": Array [
         ListItem {
@@ -454,7 +558,8 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "it's apple",
+              "value": "it's apple
+",
             },
           ],
           "ordered": false,
@@ -468,7 +573,9 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "Orange",
+              "value": "Orange
+
+",
             },
           ],
           "ordered": false,
@@ -491,6 +598,13 @@ Node {
 exports[`Parser can handle descriptive list 2`] = `
 Node {
   "children": Array [
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
     List {
       "children": Array [
         ListItem {
@@ -499,7 +613,8 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "Orange",
+              "value": "Orange
+",
             },
           ],
           "ordered": false,
@@ -513,7 +628,9 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "it's apple",
+              "value": "it's apple
+
+",
             },
           ],
           "ordered": false,
@@ -537,6 +654,13 @@ exports[`Parser can handle drawers 1`] = `
 Node {
   "children": Array [
     Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
       "children": Array [
         Node {
           "children": Array [
@@ -552,7 +676,8 @@ Node {
               "parent": [Circular],
               "type": "drawer",
               "value": "key1: value 1
-key2: value 2",
+key2: value 2
+",
             },
           ],
           "keyword": undefined,
@@ -561,6 +686,13 @@ key2: value 2",
           "priority": undefined,
           "tags": Array [],
           "type": "headline",
+        },
+        Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
         },
       ],
       "level": 1,
@@ -577,6 +709,13 @@ exports[`Parser can handle footnote 1`] = `
 Node {
   "children": Array [
     Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
       "children": Array [
         Node {
           "children": Array [
@@ -584,7 +723,9 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "Content of the footnote.",
+              "value": "Content of the footnote.
+
+",
             },
           ],
           "parent": [Circular],
@@ -622,9 +763,24 @@ Node {
     Node {
       "children": Array [],
       "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
+      "children": Array [],
+      "parent": [Circular],
       "type": "html",
       "value": "<h1>hello</h1>
-<p>world!</p>",
+<p>world!</p>
+",
+    },
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
     },
   ],
   "meta": Object {},
@@ -637,13 +793,35 @@ Node {
   "children": Array [
     Node {
       "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
+      "children": Array [],
       "name": "SRC",
       "params": Array [
         "javascript",
       ],
       "parent": [Circular],
       "type": "block",
-      "value": "console.log('hello world.')",
+      "value": "console.log('hello world.')
+",
+    },
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
     },
   ],
   "meta": Object {},
@@ -656,13 +834,35 @@ Node {
   "children": Array [
     Node {
       "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
+      "children": Array [],
+      "key": "NOP",
+      "parent": [Circular],
+      "type": "keyword",
+      "value": "code_block",
+    },
+    Node {
+      "children": Array [],
       "name": "SRC",
       "params": Array [
         "javascript",
       ],
       "parent": [Circular],
       "type": "block",
-      "value": "console.log('hello world.')",
+      "value": "console.log('hello world.')
+",
+    },
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
     },
   ],
   "meta": Object {
@@ -676,6 +876,13 @@ exports[`Parser can handle multi line footnote 1`] = `
 Node {
   "children": Array [
     Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
       "children": Array [
         Node {
           "children": Array [
@@ -683,7 +890,8 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "Content of the footnote. And here is ",
+              "value": "Content of the footnote.
+And here is ",
             },
             Node {
               "children": Array [
@@ -701,7 +909,9 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": " line.",
+              "value": " line.
+
+",
             },
           ],
           "parent": [Circular],
@@ -721,6 +931,13 @@ Node {
 exports[`Parser can handle multi line list item 1`] = `
 Node {
   "children": Array [
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
     List {
       "children": Array [
         ListItem {
@@ -729,7 +946,10 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "Apple is an American multinational technology company headquartered in Cupertino, California that designs, develops, and sells consumer electronics, computer software, and online services.",
+              "value": "Apple is an American multinational technology company headquartered in
+Cupertino, California that designs, develops, and sells consumer electronics,
+computer software, and online services.
+",
             },
           ],
           "ordered": false,
@@ -743,7 +963,8 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "Orange",
+              "value": "Orange
+",
             },
           ],
           "ordered": false,
@@ -757,7 +978,9 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "Banana",
+              "value": "Banana
+
+",
             },
           ],
           "ordered": false,
@@ -781,6 +1004,20 @@ exports[`Parser can handle multiple TODO keywords 1`] = `
 Node {
   "children": Array [
     Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
       "children": Array [
         Node {
           "children": Array [
@@ -797,6 +1034,13 @@ Node {
           "priority": undefined,
           "tags": Array [],
           "type": "headline",
+        },
+        Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
         },
       ],
       "level": 1,
@@ -823,6 +1067,13 @@ exports[`Parser can handle nested headlines 1`] = `
 Node {
   "children": Array [
     Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
       "children": Array [
         Node {
           "children": Array [
@@ -846,7 +1097,8 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "Paragraph",
+              "value": "Paragraph
+",
             },
           ],
           "parent": [Circular],
@@ -894,7 +1146,9 @@ Node {
                       "children": Array [],
                       "parent": [Circular],
                       "type": "text",
-                      "value": "content",
+                      "value": "content
+
+",
                     },
                   ],
                   "parent": [Circular],
@@ -974,6 +1228,13 @@ Node {
               "tags": Array [],
               "type": "headline",
             },
+            Node {
+              "children": Array [],
+              "parent": [Circular],
+              "type": "whitespace",
+              "value": "
+",
+            },
           ],
           "level": 2,
           "parent": [Circular],
@@ -993,6 +1254,13 @@ Node {
 exports[`Parser can handle nested list 1`] = `
 Node {
   "children": Array [
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
     List {
       "children": Array [
         ListItem {
@@ -1001,7 +1269,8 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "apple",
+              "value": "apple
+",
             },
             List {
               "children": Array [
@@ -1011,7 +1280,8 @@ Node {
                       "children": Array [],
                       "parent": [Circular],
                       "type": "text",
-                      "value": "iPhone",
+                      "value": "iPhone
+",
                     },
                   ],
                   "ordered": false,
@@ -1025,7 +1295,8 @@ Node {
                       "children": Array [],
                       "parent": [Circular],
                       "type": "text",
-                      "value": "Mac",
+                      "value": "Mac
+",
                     },
                   ],
                   "ordered": false,
@@ -1051,7 +1322,8 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "banana",
+              "value": "banana
+",
             },
           ],
           "ordered": true,
@@ -1065,7 +1337,9 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "orange",
+              "value": "orange
+
+",
             },
           ],
           "ordered": false,
@@ -1088,6 +1362,13 @@ Node {
 exports[`Parser can handle ordered list 1`] = `
 Node {
   "children": Array [
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
     List {
       "children": Array [
         ListItem {
@@ -1096,7 +1377,8 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "apple",
+              "value": "apple
+",
             },
           ],
           "ordered": true,
@@ -1110,7 +1392,8 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "banana",
+              "value": "banana
+",
             },
           ],
           "ordered": true,
@@ -1124,7 +1407,9 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "orange",
+              "value": "orange
+
+",
             },
           ],
           "ordered": false,
@@ -1148,12 +1433,23 @@ exports[`Parser can handle paragraph 1`] = `
 Node {
   "children": Array [
     Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
       "children": Array [
         Node {
           "children": Array [],
           "parent": [Circular],
           "type": "text",
-          "value": "this is line one. this is line two. this is line three.",
+          "value": "this is line one.
+this is line two.
+this is line three.
+
+",
         },
       ],
       "parent": [Circular],
@@ -1168,6 +1464,13 @@ Node {
 exports[`Parser can handle table 1`] = `
 Node {
   "children": Array [
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
     Node {
       "children": Array [
         Node {
@@ -1227,7 +1530,21 @@ Node {
         Node {
           "children": Array [],
           "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
+        },
+        Node {
+          "children": Array [],
+          "parent": [Circular],
           "type": "table.separator",
+        },
+        Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
         },
         Node {
           "children": Array [
@@ -1284,6 +1601,13 @@ Node {
           "type": "table.row",
         },
         Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
+        },
+        Node {
           "children": Array [
             Node {
               "children": Array [
@@ -1336,6 +1660,13 @@ Node {
           ],
           "parent": [Circular],
           "type": "table.row",
+        },
+        Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
         },
         Node {
           "children": Array [
@@ -1391,6 +1722,20 @@ Node {
           "parent": [Circular],
           "type": "table.row",
         },
+        Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
+        },
+        Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
+        },
       ],
       "parent": [Circular],
       "type": "table",
@@ -1404,6 +1749,13 @@ Node {
 exports[`Parser can handle table with inline style 1`] = `
 Node {
   "children": Array [
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
     Node {
       "children": Array [
         Node {
@@ -1463,7 +1815,21 @@ Node {
         Node {
           "children": Array [],
           "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
+        },
+        Node {
+          "children": Array [],
+          "parent": [Circular],
           "type": "table.separator",
+        },
+        Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
         },
         Node {
           "children": Array [
@@ -1543,6 +1909,13 @@ Node {
           "type": "table.row",
         },
         Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
+        },
+        Node {
           "children": Array [
             Node {
               "children": Array [
@@ -1612,6 +1985,13 @@ Node {
           ],
           "parent": [Circular],
           "type": "table.row",
+        },
+        Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
         },
         Node {
           "children": Array [
@@ -1684,6 +2064,20 @@ Node {
           "parent": [Circular],
           "type": "table.row",
         },
+        Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
+        },
+        Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
+        },
       ],
       "parent": [Circular],
       "type": "table",
@@ -1697,6 +2091,13 @@ Node {
 exports[`Parser can handle timestamp after headline 1`] = `
 Node {
   "children": Array [
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
     Node {
       "children": Array [
         Node {
@@ -1723,12 +2124,21 @@ Node {
           "type": "headline",
         },
         Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
+        },
+        Node {
           "children": Array [
             Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "Paragraph",
+              "value": "Paragraph
+
+",
             },
           ],
           "parent": [Circular],
@@ -1748,6 +2158,13 @@ Node {
 exports[`Parser can handle unordered list 1`] = `
 Node {
   "children": Array [
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
     List {
       "children": Array [
         ListItem {
@@ -1756,7 +2173,8 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "apple",
+              "value": "apple
+",
             },
           ],
           "ordered": false,
@@ -1770,7 +2188,8 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "banana",
+              "value": "banana
+",
             },
           ],
           "ordered": false,
@@ -1784,7 +2203,9 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "orange",
+              "value": "orange
+
+",
             },
           ],
           "ordered": false,
@@ -1808,6 +2229,13 @@ exports[`Parser knows when empty lines can stop footnote 1`] = `
 Node {
   "children": Array [
     Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
       "children": Array [
         Node {
           "children": Array [
@@ -1815,31 +2243,12 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "Content of the footnote. And here is another line.",
-            },
-          ],
-          "parent": [Circular],
-          "type": "paragraph",
-        },
-        Node {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "still belongs to fn:1",
-            },
-          ],
-          "parent": [Circular],
-          "type": "paragraph",
-        },
-        Node {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "This is not.",
+              "value": "Content of the footnote.
+And here is another line.
+
+still belongs to fn:1
+
+",
             },
           ],
           "parent": [Circular],
@@ -1849,6 +2258,20 @@ Node {
       "label": "1",
       "parent": [Circular],
       "type": "footnote.definition",
+    },
+    Node {
+      "children": Array [
+        Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "text",
+          "value": "This is not.
+
+",
+        },
+      ],
+      "parent": [Circular],
+      "type": "paragraph",
     },
   ],
   "meta": Object {},
@@ -1860,6 +2283,13 @@ exports[`Parser knows when footnote can stop footnote 1`] = `
 Node {
   "children": Array [
     Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
       "children": Array [
         Node {
           "children": Array [
@@ -1867,7 +2297,9 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "Content of the footnote. And here is another line.",
+              "value": "Content of the footnote.
+And here is another line.
+",
             },
           ],
           "parent": [Circular],
@@ -1886,7 +2318,9 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "another footnote.",
+              "value": "another footnote.
+
+",
             },
           ],
           "parent": [Circular],
@@ -1907,6 +2341,13 @@ exports[`Parser knows when headline can stop footnote 1`] = `
 Node {
   "children": Array [
     Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
       "children": Array [
         Node {
           "children": Array [
@@ -1914,7 +2355,9 @@ Node {
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": "Content of the footnote. And here is another line.",
+              "value": "Content of the footnote.
+And here is another line.
+",
             },
           ],
           "parent": [Circular],
@@ -1943,6 +2386,13 @@ Node {
           "tags": Array [],
           "type": "headline",
         },
+        Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
+        },
       ],
       "level": 1,
       "parent": [Circular],
@@ -1957,6 +2407,34 @@ Node {
 exports[`Parser works 1`] = `
 Node {
   "children": Array [
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
+    Node {
+      "children": Array [],
+      "key": "TITLE",
+      "parent": [Circular],
+      "type": "keyword",
+      "value": "hello world",
+    },
+    Node {
+      "children": Array [],
+      "key": "DATE",
+      "parent": [Circular],
+      "type": "keyword",
+      "value": "2018-01-01",
+    },
+    Node {
+      "children": Array [],
+      "parent": [Circular],
+      "type": "whitespace",
+      "value": "
+",
+    },
     Node {
       "children": Array [
         Node {
@@ -1981,7 +2459,8 @@ Node {
               "parent": [Circular],
               "type": "drawer",
               "value": "key: value
-key: value",
+key: value
+",
             },
           ],
           "keyword": "NEXT",
@@ -1990,6 +2469,13 @@ key: value",
           "priority": undefined,
           "tags": Array [],
           "type": "headline",
+        },
+        Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
         },
         Node {
           "children": Array [
@@ -2080,7 +2566,8 @@ key: value",
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": ", the round pegs in the ",
+              "value": ",
+the round pegs in the ",
             },
             Node {
               "children": Array [
@@ -2098,7 +2585,9 @@ key: value",
               "children": Array [],
               "parent": [Circular],
               "type": "text",
-              "value": " square holes...",
+              "value": " square holes...
+
+",
             },
           ],
           "parent": [Circular],

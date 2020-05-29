@@ -3,46 +3,39 @@
 exports[`Lexer knows blank 1`] = `
 Object {
   "name": "blank",
-  "raw": "",
+  "raw": " ",
 }
 `;
 
 exports[`Lexer knows blank 2`] = `
 Object {
   "name": "blank",
-  "raw": " ",
+  "raw": "    ",
 }
 `;
 
 exports[`Lexer knows blank 3`] = `
 Object {
   "name": "blank",
-  "raw": "    ",
+  "raw": "	",
 }
 `;
 
 exports[`Lexer knows blank 4`] = `
 Object {
   "name": "blank",
-  "raw": "	",
+  "raw": " 	",
 }
 `;
 
 exports[`Lexer knows blank 5`] = `
 Object {
   "name": "blank",
-  "raw": " 	",
-}
-`;
-
-exports[`Lexer knows blank 6`] = `
-Object {
-  "name": "blank",
   "raw": "	 ",
 }
 `;
 
-exports[`Lexer knows blank 7`] = `
+exports[`Lexer knows blank 6`] = `
 Object {
   "name": "blank",
   "raw": " 	  ",
