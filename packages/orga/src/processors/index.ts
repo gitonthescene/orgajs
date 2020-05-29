@@ -2,6 +2,7 @@ import list from './list'
 const keyword = require('./keyword')
 const headline = require('./headline')
 const line = require('./line')
+const comment = require('./comment');
 const block = require('./block')
 const table = require('./table')
 const horizontalRule = require('./horizontal-rule')
@@ -18,5 +19,6 @@ module.exports = {
   "table.separator": table,
   horizontalRule,
   footnote,
+  comment,
   blank,
 }
