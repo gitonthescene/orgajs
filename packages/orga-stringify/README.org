@@ -16,7 +16,7 @@ oast (Orga AST) tree and compiles it to a string.
 
     const processor = unified()
       .use(parse)
-      .use(render, { toJSON: false });
+      .use(render);
 
     function main() {
       processor
@@ -41,37 +41,28 @@ oast (Orga AST) tree and compiles it to a string.
   - Processing with an attacher
 
     You can modify the compiler using a [[https://unifiedjs.com/explore/package/unified/#function-attacheroptions][unified attacher]] to control how the compiled result is
-    rendered.  In this example markup for links and various highlighting are stripped in the output.
+    rendered.  You can strip markup for links and various highlighting in the output like so.
 
     #+BEGIN_SRC javascript
-    const unified = require("unified");
-    const parse = require("orga-unified");
-    const render = require("orga-stringify");
     const attach = require("orga-unified/lib/unadorned");
-    const vfile = require("to-vfile");
 
     const processor = unified()
       .use(parse)
-      .use(render, { toJSON: false })
+      .use(render)
       .use(attach);
 
-    function main() {
-      processor
-        .process(
-          vfile.readSync(
-            "myfile.org"
-          )
-        )
-        .then(
-          (file) => {
-            process.stdout.write(String(file));
-          },
-          (err) => {
-            console.log(String(err));
-          }
-        );
-    }
-    main();
+    #+END_SRC
+
+  - Render to JSON
+
+    The =orga-stringify= processor also accepts a =toJSON= option to generate the oast tree in JSON
+    format.  Simply modify the processor like so.
+
+    #+BEGIN_SRC javascript
+
+    const processor = unified()
+      .use(parse)
+      .use(render, {toJSON: true});
 
     #+END_SRC
 
