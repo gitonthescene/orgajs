@@ -1,0 +1,84 @@
+#+TITLE: orga-stringify
+
+#+HTML: <p align="center"><img src="assets/logo.png" width="300" height="300"/></p>
+
+#+BEGIN_QUOTE
+org-mode with JavaScript
+#+END_QUOTE
+
+This package implements [[https://unifiedjs.com/explore/package/unified/#processorstringifynode-file][stringify processor]] to be used in the [[https://unifiedjs.com/][unified]] framework.  This takes in an
+oast (Orga AST) tree and compiles it to a string.
+
+* Examples
+  - Simple processing
+
+    This processes the orgfile =myfile.org=, parses it with =orga-unifed= and compiles the result back to an org file!
+
+    #+BEGIN_SRC javascript
+    const unified = require("unified");
+    const parse = require("orga-unified");
+    const render = require("orga-stringify");
+    const vfile = require("to-vfile");
+
+    const processor = unified()
+      .use(parse)
+      .use(render, { toJSON: false });
+
+    function main() {
+      processor
+        .process(
+          vfile.readSync(
+            "myfile.org"
+          )
+        )
+        .then(
+          (file) => {
+            process.stdout.write(String(file));
+          },
+          (err) => {
+            console.log(String(err));
+          }
+        );
+    }
+    main();
+
+    #+END_SRC
+
+  - Processing with an attacher
+
+    You can modify the compiler using a [[https://unifiedjs.com/explore/package/unified/#function-attacheroptions][unified attacher]] to control how the compiled result is
+    rendered.  In this example markup for links and various highlighting are stripped in the output.
+
+    #+BEGIN_SRC javascript
+    const unified = require("unified");
+    const parse = require("orga-unified");
+    const render = require("orga-stringify");
+    const attach = require("orga-unified/lib/unadorned");
+    const vfile = require("to-vfile");
+
+    const processor = unified()
+      .use(parse)
+      .use(render, { toJSON: false })
+      .use(attach);
+
+    function main() {
+      processor
+        .process(
+          vfile.readSync(
+            "myfile.org"
+          )
+        )
+        .then(
+          (file) => {
+            process.stdout.write(String(file));
+          },
+          (err) => {
+            console.log(String(err));
+          }
+        );
+    }
+    main();
+
+    #+END_SRC
+
+  - Exercise!  :P  Take this README.org and pull the code out of the javascript blocks.
