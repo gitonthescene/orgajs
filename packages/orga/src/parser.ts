@@ -37,7 +37,7 @@ class OrgaParser implements orga.Parser {
     const document = new Node('root').with({ meta: {} })
     self.cursor = -1
     self.linecursor = -1
-    self.lines = text.split(/\r\n|\n/) // TODO: more robust lines?
+    self.lines = text ? text.split(/\r\n|\n/) : [] // TODO: more robust lines?
     self.tokens = self.tokens || []
     return this.parseSection(document)
   }

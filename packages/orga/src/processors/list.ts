@@ -29,21 +29,13 @@ export default function(token, section: Node): Node {
     while (self.hasNext()) {
       var token = self.peek()
       const { name, raw } = token
-      if (name === `blank`) {
-          self.consume()
-          tokens.push(token)
-      //if (name === `blank`) {
-      //  // @@DAM how do we reach the end of the stream?
-      //  var blank = self.next()
-      //  if ( blank ) lines.push(blank.raw);
-      } else if (true || (name === `line`)) {
-        const lineIndent = raw.search(/\S/)
+      const lineIndent = raw.search(/\S/)
+      if (name !== `blank`) {
         if (lineIndent <= indent) break
         token.raw = token.raw.substr(indent+1)
-        tokens.push(token)
-        self.consume()
-        //lines.push(self.next().raw.trimLeft())
-      } else break;
+      }
+      tokens.push(token)
+      self.consume()
     }
     // Probably better collect the tokens and pass them on than reparsing
     var innerParser = new OrgaParser( this.options )
