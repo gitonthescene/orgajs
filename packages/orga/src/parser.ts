@@ -38,7 +38,7 @@ class OrgaParser implements orga.Parser {
     self.cursor = -1
     self.linecursor = -1
     self.lines = text.split(/\r\n|\n/) // TODO: more robust lines?
-      self.tokens = []
+    self.tokens = self.tokens || []
     return this.parseSection(document)
   }
 

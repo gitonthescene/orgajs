@@ -4,7 +4,6 @@ function parseBlock() {
   const t = this.next()
   const { data: { type, params } } = t
   const lines = []
-  if (this.peek().name === `blank`) this.consume(); // chew up new line
   this.eatNewline();
   while (this.hasNext()) {
     const t = this.next()

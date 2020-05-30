@@ -1,5 +1,6 @@
 import Node from '../node'
 const inlineParse = require('../inline').parse
+import OrgaParser from '../parser';
 
 class List extends Node {
   ordered: boolean
@@ -18,25 +19,38 @@ export default function(token, section: Node): Node {
 
   const parseListItem = () => {
     const { indent, content, ordered, checked, tag } = self.next().data
-    const lines = [content]
+    //const lines = [content]
+    const tokens = []
     const item = new ListItem(`list.item`).with({ ordered, tag })
+    item.push(inlineParse(content))
     if (checked !== undefined) {
       item.checked = checked
     }
     while (self.hasNext()) {
-      const { name, raw } = self.peek()
+      var token = self.peek()
+      const { name, raw } = token
       if (name === `blank`) {
-        // @@DAM how do we reach the end of the stream?
-        var blank = self.next()
-        if ( blank ) lines.push(blank.raw);
-      } else if (name === `line`) {
+          self.consume()
+          tokens.push(token)
+      //if (name === `blank`) {
+      //  // @@DAM how do we reach the end of the stream?
+      //  var blank = self.next()
+      //  if ( blank ) lines.push(blank.raw);
+      } else if (true || (name === `line`)) {
         const lineIndent = raw.search(/\S/)
         if (lineIndent <= indent) break
-        lines.push(self.next().raw.trimLeft())
+        token.raw = token.raw.substr(indent+1)
+        tokens.push(token)
+        self.consume()
+        //lines.push(self.next().raw.trimLeft())
       } else break;
     }
-    item.push(inlineParse(lines.join(``)))
-    return item
+    // Probably better collect the tokens and pass them on than reparsing
+    var innerParser = new OrgaParser( this.options )
+    innerParser.tokens = tokens
+    var root = innerParser.parse('')
+    root.children.forEach(nd => item.push(nd));
+    return item;
   }
 
   const parseList = level => {
