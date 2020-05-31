@@ -24,7 +24,11 @@ function serializeText(ctx, node, index, parent) {
       txt += `${separator}\n`;
     } else {
       txt += `|${row
-        .map((cell, i) => ` ${cell.padStart(dims[i])} `)
+        .map((cell, i) => {
+          return ` ${
+            isNaN(cell) ? cell.padEnd(dims[i]) : cell.padStart(dims[i])
+          } `;
+        })
         .join("|")}|\n`;
     }
   });
