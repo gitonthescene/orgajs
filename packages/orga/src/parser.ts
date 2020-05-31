@@ -108,7 +108,10 @@ class OrgaParser implements orga.Parser {
 
   parseSection(section: Node): Node {
     const token = this.peek()
-    if (!token) return section
+    if (!token) {
+      this.tokens = [] // Because tests reuse the parser
+      return section
+    }
     if (token.name !== `blank`) this._cel = 0 // reset consecutive empty lines
     const p = this.processor[token.name]
     if (p) {

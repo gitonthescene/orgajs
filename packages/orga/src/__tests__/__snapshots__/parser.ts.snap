@@ -340,10 +340,22 @@ Node {
               "parent": [Circular],
               "type": "text",
               "value": "Apple is an American multinational technology company headquartered in
-Cupertino, California that designs, develops, and sells consumer electronics,
-
-computer software, and online services.
 ",
+            },
+            Node {
+              "children": Array [
+                Node {
+                  "children": Array [],
+                  "parent": [Circular],
+                  "type": "text",
+                  "value": " Cupertino, California that designs, develops, and sells consumer electronics,
+
+ computer software, and online services.
+",
+                },
+              ],
+              "parent": [Circular],
+              "type": "paragraph",
             },
           ],
           "ordered": false,
@@ -373,7 +385,13 @@ computer software, and online services.
               "parent": [Circular],
               "type": "text",
               "value": "Banana
-
+",
+            },
+            Node {
+              "children": Array [],
+              "parent": [Circular],
+              "type": "whitespace",
+              "value": "
 ",
             },
           ],
@@ -465,7 +483,13 @@ Node {
               "parent": [Circular],
               "type": "text",
               "value": "Banana
-
+",
+            },
+            Node {
+              "children": Array [],
+              "parent": [Circular],
+              "type": "whitespace",
+              "value": "
 ",
             },
           ],
@@ -574,7 +598,13 @@ Node {
               "parent": [Circular],
               "type": "text",
               "value": "Orange
-
+",
+            },
+            Node {
+              "children": Array [],
+              "parent": [Circular],
+              "type": "whitespace",
+              "value": "
 ",
             },
           ],
@@ -629,7 +659,13 @@ Node {
               "parent": [Circular],
               "type": "text",
               "value": "it's apple
-
+",
+            },
+            Node {
+              "children": Array [],
+              "parent": [Circular],
+              "type": "whitespace",
+              "value": "
 ",
             },
           ],
@@ -947,9 +983,21 @@ Node {
               "parent": [Circular],
               "type": "text",
               "value": "Apple is an American multinational technology company headquartered in
-Cupertino, California that designs, develops, and sells consumer electronics,
-computer software, and online services.
 ",
+            },
+            Node {
+              "children": Array [
+                Node {
+                  "children": Array [],
+                  "parent": [Circular],
+                  "type": "text",
+                  "value": " Cupertino, California that designs, develops, and sells consumer electronics,
+ computer software, and online services.
+",
+                },
+              ],
+              "parent": [Circular],
+              "type": "paragraph",
             },
           ],
           "ordered": false,
@@ -979,7 +1027,13 @@ computer software, and online services.
               "parent": [Circular],
               "type": "text",
               "value": "Banana
-
+",
+            },
+            Node {
+              "children": Array [],
+              "parent": [Circular],
+              "type": "whitespace",
+              "value": "
 ",
             },
           ],
@@ -1338,7 +1392,13 @@ Node {
               "parent": [Circular],
               "type": "text",
               "value": "orange
-
+",
+            },
+            Node {
+              "children": Array [],
+              "parent": [Circular],
+              "type": "whitespace",
+              "value": "
 ",
             },
           ],
@@ -1408,7 +1468,13 @@ Node {
               "parent": [Circular],
               "type": "text",
               "value": "orange
-
+",
+            },
+            Node {
+              "children": Array [],
+              "parent": [Circular],
+              "type": "whitespace",
+              "value": "
 ",
             },
           ],
@@ -2204,7 +2270,13 @@ Node {
               "parent": [Circular],
               "type": "text",
               "value": "orange
-
+",
+            },
+            Node {
+              "children": Array [],
+              "parent": [Circular],
+              "type": "whitespace",
+              "value": "
 ",
             },
           ],

@@ -22,7 +22,8 @@ export default function(token, section: Node): Node {
     //const lines = [content]
     const tokens = []
     const item = new ListItem(`list.item`).with({ ordered, tag })
-    item.push(inlineParse(content))
+    var eol = this.eatNewline() || ''
+    item.push(inlineParse(content+eol))
     if (checked !== undefined) {
       item.checked = checked
     }
