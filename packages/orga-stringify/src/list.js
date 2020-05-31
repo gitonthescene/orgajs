@@ -12,13 +12,14 @@ function serializeText(ctx, node, index, parent) {
   var inner = orig ? orig.replace(/\r\n|\n$/, "").split(/\r\n|\n/) : [];
   var indent = "";
   if (node.type == "list") {
-    indent = ctx.level === undefined ? "" : "  ";
+    var indent = "";
     var ret = inner ? indent + inner.join(`\n${indent}`) + "\n" : "";
     return ret;
   } else {
-    indent = ctx.level === 0 ? "" : "  ";
+    var indent = " ".repeat(node.indent);
+    var bodyIndent = " ".repeat(node.bodyIndent);
     if (inner.length > 0) {
-      inner = indent + inner.join(`\n${indent}`) + "\n";
+      inner = bodyIndent + inner.join(`\n${bodyIndent}`) + "\n";
     } else inner = "";
   }
   var checked =

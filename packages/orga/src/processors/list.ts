@@ -10,6 +10,8 @@ class List extends Node {
 class ListItem extends Node {
   ordered: boolean
   content: string
+  indent: number
+  bodyIndent: number
   checked: boolean
   tag?: string
 }
@@ -23,7 +25,7 @@ export default function(token, section: Node): Node {
     const tokens = []
     var eol = this.eatNewline() || ''
     var contents = content + eol
-    const item = new ListItem(`list.item`).with({ ordered, tag, content: contents })
+    const item = new ListItem(`list.item`).with({ ordered, tag, indent, content: contents })
     if (checked !== undefined) {
       item.checked = checked
     }
@@ -33,7 +35,8 @@ export default function(token, section: Node): Node {
       const lineIndent = raw.search(/\S/)
       if (name !== `blank`) {
         if (lineIndent <= indent) break
-        token.raw = token.raw.substr(indent+1)
+        item.bodyIndent = item.bodyIndent || lineIndent;
+        token.raw = token.raw.substr(item.bodyIndent)
       }
       tokens.push(token)
       self.consume()
