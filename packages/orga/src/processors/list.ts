@@ -9,6 +9,7 @@ class List extends Node {
 
 class ListItem extends Node {
   ordered: boolean
+  content: string
   checked: boolean
   tag?: string
 }
@@ -19,11 +20,10 @@ export default function(token, section: Node): Node {
 
   const parseListItem = () => {
     const { indent, content, ordered, checked, tag } = self.next().data
-    //const lines = [content]
     const tokens = []
-    const item = new ListItem(`list.item`).with({ ordered, tag })
     var eol = this.eatNewline() || ''
-    item.push(inlineParse(content+eol))
+    var contents = content + eol
+    const item = new ListItem(`list.item`).with({ ordered, tag, content: contents })
     if (checked !== undefined) {
       item.checked = checked
     }

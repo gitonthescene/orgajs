@@ -336,13 +336,6 @@ Node {
         ListItem {
           "children": Array [
             Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "Apple is an American multinational technology company headquartered in
-",
-            },
-            Node {
               "children": Array [
                 Node {
                   "children": Array [],
@@ -358,6 +351,17 @@ Node {
               "type": "paragraph",
             },
           ],
+          "content": "Apple is an American multinational technology company headquartered in
+",
+          "ordered": false,
+          "parent": [Circular],
+          "tag": undefined,
+          "type": "list.item",
+        },
+        ListItem {
+          "children": Array [],
+          "content": "Orange
+",
           "ordered": false,
           "parent": [Circular],
           "tag": undefined,
@@ -365,28 +369,6 @@ Node {
         },
         ListItem {
           "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "Orange
-",
-            },
-          ],
-          "ordered": false,
-          "parent": [Circular],
-          "tag": undefined,
-          "type": "list.item",
-        },
-        ListItem {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "Banana
-",
-            },
             Node {
               "children": Array [],
               "parent": [Circular],
@@ -395,6 +377,8 @@ Node {
 ",
             },
           ],
+          "content": "Banana
+",
           "ordered": false,
           "parent": [Circular],
           "tag": undefined,
@@ -425,15 +409,9 @@ Node {
     List {
       "children": Array [
         ListItem {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "Apple is an American multinational technology company headquartered in
+          "children": Array [],
+          "content": "Apple is an American multinational technology company headquartered in
 ",
-            },
-          ],
           "ordered": false,
           "parent": [Circular],
           "tag": undefined,
@@ -462,15 +440,9 @@ Node {
     List {
       "children": Array [
         ListItem {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "Orange
+          "children": Array [],
+          "content": "Orange
 ",
-            },
-          ],
           "ordered": false,
           "parent": [Circular],
           "tag": undefined,
@@ -481,18 +453,13 @@ Node {
             Node {
               "children": Array [],
               "parent": [Circular],
-              "type": "text",
-              "value": "Banana
-",
-            },
-            Node {
-              "children": Array [],
-              "parent": [Circular],
               "type": "whitespace",
               "value": "
 ",
             },
           ],
+          "content": "Banana
+",
           "ordered": false,
           "parent": [Circular],
           "tag": undefined,
@@ -577,15 +544,9 @@ Node {
     List {
       "children": Array [
         ListItem {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "it's apple
+          "children": Array [],
+          "content": "it's apple
 ",
-            },
-          ],
           "ordered": false,
           "parent": [Circular],
           "tag": "Apple",
@@ -596,18 +557,13 @@ Node {
             Node {
               "children": Array [],
               "parent": [Circular],
-              "type": "text",
-              "value": "Orange
-",
-            },
-            Node {
-              "children": Array [],
-              "parent": [Circular],
               "type": "whitespace",
               "value": "
 ",
             },
           ],
+          "content": "Orange
+",
           "ordered": false,
           "parent": [Circular],
           "tag": undefined,
@@ -638,15 +594,9 @@ Node {
     List {
       "children": Array [
         ListItem {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "Orange
+          "children": Array [],
+          "content": "Orange
 ",
-            },
-          ],
           "ordered": false,
           "parent": [Circular],
           "tag": undefined,
@@ -657,18 +607,13 @@ Node {
             Node {
               "children": Array [],
               "parent": [Circular],
-              "type": "text",
-              "value": "it's apple
-",
-            },
-            Node {
-              "children": Array [],
-              "parent": [Circular],
               "type": "whitespace",
               "value": "
 ",
             },
           ],
+          "content": "it's apple
+",
           "ordered": false,
           "parent": [Circular],
           "tag": "Apple",
@@ -979,13 +924,6 @@ Node {
         ListItem {
           "children": Array [
             Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "Apple is an American multinational technology company headquartered in
-",
-            },
-            Node {
               "children": Array [
                 Node {
                   "children": Array [],
@@ -1000,6 +938,17 @@ Node {
               "type": "paragraph",
             },
           ],
+          "content": "Apple is an American multinational technology company headquartered in
+",
+          "ordered": false,
+          "parent": [Circular],
+          "tag": undefined,
+          "type": "list.item",
+        },
+        ListItem {
+          "children": Array [],
+          "content": "Orange
+",
           "ordered": false,
           "parent": [Circular],
           "tag": undefined,
@@ -1007,28 +956,6 @@ Node {
         },
         ListItem {
           "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "Orange
-",
-            },
-          ],
-          "ordered": false,
-          "parent": [Circular],
-          "tag": undefined,
-          "type": "list.item",
-        },
-        ListItem {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "Banana
-",
-            },
             Node {
               "children": Array [],
               "parent": [Circular],
@@ -1037,6 +964,8 @@ Node {
 ",
             },
           ],
+          "content": "Banana
+",
           "ordered": false,
           "parent": [Circular],
           "tag": undefined,
@@ -1319,40 +1248,21 @@ Node {
       "children": Array [
         ListItem {
           "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "apple
-",
-            },
             List {
               "children": Array [
                 ListItem {
-                  "children": Array [
-                    Node {
-                      "children": Array [],
-                      "parent": [Circular],
-                      "type": "text",
-                      "value": "iPhone
+                  "children": Array [],
+                  "content": "iPhone
 ",
-                    },
-                  ],
                   "ordered": false,
                   "parent": [Circular],
                   "tag": undefined,
                   "type": "list.item",
                 },
                 ListItem {
-                  "children": Array [
-                    Node {
-                      "children": Array [],
-                      "parent": [Circular],
-                      "type": "text",
-                      "value": "Mac
+                  "children": Array [],
+                  "content": "Mac
 ",
-                    },
-                  ],
                   "ordered": false,
                   "parent": [Circular],
                   "tag": undefined,
@@ -1365,6 +1275,17 @@ Node {
               "type": "list",
             },
           ],
+          "content": "apple
+",
+          "ordered": true,
+          "parent": [Circular],
+          "tag": undefined,
+          "type": "list.item",
+        },
+        ListItem {
+          "children": Array [],
+          "content": "banana
+",
           "ordered": true,
           "parent": [Circular],
           "tag": undefined,
@@ -1372,28 +1293,6 @@ Node {
         },
         ListItem {
           "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "banana
-",
-            },
-          ],
-          "ordered": true,
-          "parent": [Circular],
-          "tag": undefined,
-          "type": "list.item",
-        },
-        ListItem {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "orange
-",
-            },
             Node {
               "children": Array [],
               "parent": [Circular],
@@ -1402,6 +1301,8 @@ Node {
 ",
             },
           ],
+          "content": "orange
+",
           "ordered": false,
           "parent": [Circular],
           "tag": undefined,
@@ -1432,15 +1333,18 @@ Node {
     List {
       "children": Array [
         ListItem {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "apple
+          "children": Array [],
+          "content": "apple
 ",
-            },
-          ],
+          "ordered": true,
+          "parent": [Circular],
+          "tag": undefined,
+          "type": "list.item",
+        },
+        ListItem {
+          "children": Array [],
+          "content": "banana
+",
           "ordered": true,
           "parent": [Circular],
           "tag": undefined,
@@ -1448,28 +1352,6 @@ Node {
         },
         ListItem {
           "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "banana
-",
-            },
-          ],
-          "ordered": true,
-          "parent": [Circular],
-          "tag": undefined,
-          "type": "list.item",
-        },
-        ListItem {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "orange
-",
-            },
             Node {
               "children": Array [],
               "parent": [Circular],
@@ -1478,6 +1360,8 @@ Node {
 ",
             },
           ],
+          "content": "orange
+",
           "ordered": false,
           "parent": [Circular],
           "tag": undefined,
@@ -2234,15 +2118,18 @@ Node {
     List {
       "children": Array [
         ListItem {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "apple
+          "children": Array [],
+          "content": "apple
 ",
-            },
-          ],
+          "ordered": false,
+          "parent": [Circular],
+          "tag": undefined,
+          "type": "list.item",
+        },
+        ListItem {
+          "children": Array [],
+          "content": "banana
+",
           "ordered": false,
           "parent": [Circular],
           "tag": undefined,
@@ -2250,28 +2137,6 @@ Node {
         },
         ListItem {
           "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "banana
-",
-            },
-          ],
-          "ordered": false,
-          "parent": [Circular],
-          "tag": undefined,
-          "type": "list.item",
-        },
-        ListItem {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "text",
-              "value": "orange
-",
-            },
             Node {
               "children": Array [],
               "parent": [Circular],
@@ -2280,6 +2145,8 @@ Node {
 ",
             },
           ],
+          "content": "orange
+",
           "ordered": false,
           "parent": [Circular],
           "tag": undefined,

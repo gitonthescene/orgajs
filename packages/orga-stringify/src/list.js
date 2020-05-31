@@ -10,13 +10,17 @@ function serializeText(ctx, node, index, parent) {
       : { ...ctx };
   var orig = all(newctxt, node);
   var inner = orig.replace(/\r\n|\n$/, "").split(/\r\n|\n/);
+  var indent = "";
   if (node.type == "list") {
-    var indent = ctx.level === undefined ? "" : "  ";
+    indent = ctx.level === undefined ? "" : "  ";
     return indent + inner.join(`\n${indent}`) + "\n";
+  } else {
+    indent = "  ";
+    inner = indent + inner.join(`\n${indent}`) + "\n";
   }
   var checked =
     node.checked === true ? "[X] " : node.checked == false ? "[ ] " : "";
 
   var bullet = node.ordered ? `${index + 1}.` : "-";
-  return `${bullet} ${checked}${orig}`;
+  return `${indent}${bullet} ${checked}${node.content}${inner}`;
 }
