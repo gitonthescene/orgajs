@@ -65,7 +65,6 @@ org.define('planning', RegExp(`^\\s*(${PLANNING_KEYWORDS.join('|')}):\\s*(.+)$`)
 })
 
 org.define('timestamp', XRegExp(timestampPattern, 'i'), (m, options) => {
-  // console.log(options)
   return parseTimestamp(m, options)
 })
 

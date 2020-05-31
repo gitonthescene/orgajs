@@ -30,6 +30,7 @@ export default function(token, section: Node): Node {
     }
     while (self.hasNext()) {
       var token = self.peek()
+      if (!token) break;
       const { name, raw } = token
       const lineIndent = raw.search(/\S/)
       if (name !== `blank`) {
