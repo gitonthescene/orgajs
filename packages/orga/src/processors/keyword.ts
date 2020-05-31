@@ -37,9 +37,9 @@ function process(token, section) {
           section.meta[field].push(value)
         }
     }
-    section.push(new Node(`keyword`).with(token.data));
     break
   }
+  section.push(new Node(`keyword`).with(token.data));
   this.consume()
   this.eatNewline()
   return this.parseSection(section)

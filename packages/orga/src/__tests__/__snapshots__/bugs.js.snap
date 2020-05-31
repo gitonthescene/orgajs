@@ -11,6 +11,13 @@ Node {
 ",
     },
     Node {
+      "children": Array [],
+      "key": "TODO",
+      "parent": [Circular],
+      "type": "keyword",
+      "value": "(whatever keyword)",
+    },
+    Node {
       "children": Array [
         Node {
           "children": Array [

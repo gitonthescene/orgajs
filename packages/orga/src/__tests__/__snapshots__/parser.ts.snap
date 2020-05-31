@@ -12,6 +12,13 @@ Node {
     },
     Node {
       "children": Array [],
+      "key": "TODO",
+      "parent": [Circular],
+      "type": "keyword",
+      "value": "TODO NEXT | DONE",
+    },
+    Node {
+      "children": Array [],
       "parent": [Circular],
       "type": "whitespace",
       "value": "
@@ -61,6 +68,13 @@ Node {
       "type": "whitespace",
       "value": "
 ",
+    },
+    Node {
+      "children": Array [],
+      "key": "NAME",
+      "parent": [Circular],
+      "type": "keyword",
+      "value": "code_block",
     },
     Node {
       "attributes": Object {
@@ -671,6 +685,13 @@ Node {
       "type": "html",
       "value": "<h1>Hello</h1>",
     },
+    Node {
+      "children": Array [],
+      "key": "HTML",
+      "parent": [Circular],
+      "type": "keyword",
+      "value": "<h1>Hello</h1>",
+    },
   ],
   "meta": Object {},
   "type": "root",
@@ -710,6 +731,13 @@ Node {
       "type": "whitespace",
       "value": "
 ",
+    },
+    Node {
+      "children": Array [],
+      "key": "NAME",
+      "parent": [Circular],
+      "type": "keyword",
+      "value": "code_block",
     },
     Node {
       "children": Array [],
@@ -904,6 +932,27 @@ Node {
       "type": "whitespace",
       "value": "
 ",
+    },
+    Node {
+      "children": Array [],
+      "key": "TODO",
+      "parent": [Circular],
+      "type": "keyword",
+      "value": "TODO NEXT | DONE",
+    },
+    Node {
+      "children": Array [],
+      "key": "TODO",
+      "parent": [Circular],
+      "type": "keyword",
+      "value": "DRAFT PUBLISHED",
+    },
+    Node {
+      "children": Array [],
+      "key": "TODO",
+      "parent": [Circular],
+      "type": "keyword",
+      "value": "BUG FEATURE | DONE",
     },
     Node {
       "children": Array [],
@@ -2219,6 +2268,13 @@ Node {
       "parent": [Circular],
       "type": "keyword",
       "value": "hello world",
+    },
+    Node {
+      "children": Array [],
+      "key": "TODO",
+      "parent": [Circular],
+      "type": "keyword",
+      "value": "TODO NEXT | DONE",
     },
     Node {
       "children": Array [],
