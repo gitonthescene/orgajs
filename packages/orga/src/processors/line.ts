@@ -6,6 +6,7 @@ function process(token, section) {
   let nodes = []
   while (this.hasNext()) {
     const token = this.peek()
+    if (!token) break;
     // also eats broken block/drawer ends
     if (![`line`, `block.end`, `drawer.end`, `blank`].includes(token.name)) break
 

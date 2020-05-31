@@ -51,13 +51,6 @@ Node {
           "tags": Array [],
           "type": "headline",
         },
-        Node {
-          "children": Array [],
-          "parent": [Circular],
-          "type": "whitespace",
-          "value": "
-",
-        },
       ],
       "level": 1,
       "parent": [Circular],

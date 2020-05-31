@@ -35,13 +35,6 @@ Node {
           "tags": Array [],
           "type": "headline",
         },
-        Node {
-          "children": Array [],
-          "parent": [Circular],
-          "type": "whitespace",
-          "value": "
-",
-        },
       ],
       "level": 1,
       "parent": [Circular],
@@ -81,13 +74,6 @@ Node {
       "parent": [Circular],
       "type": "block",
       "value": "console.log('hello world.')
-",
-    },
-    Node {
-      "children": Array [],
-      "parent": [Circular],
-      "type": "whitespace",
-      "value": "
 ",
     },
   ],
@@ -134,13 +120,6 @@ Node {
           "type": "block",
           "value": "console.log('hello')
 console.log('world')
-",
-        },
-        Node {
-          "children": Array [],
-          "parent": [Circular],
-          "type": "whitespace",
-          "value": "
 ",
         },
       ],
@@ -191,7 +170,6 @@ Node {
               "value": "#+BEGIN_SRC javascript
 console.log('hello')
 console.log('world')
-
 ",
             },
           ],
@@ -246,7 +224,6 @@ Node {
               "value": "console.log('hello')
 console.log('world')
 #+END_SRC
-
 ",
             },
           ],
@@ -303,7 +280,6 @@ key: value
 key: value
 
 Paragraph
-
 ",
             },
           ],
@@ -370,15 +346,7 @@ Node {
           "type": "list.item",
         },
         ListItem {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "whitespace",
-              "value": "
-",
-            },
-          ],
+          "children": Array [],
           "content": "Banana
 ",
           "indent": 0,
@@ -454,15 +422,7 @@ Node {
           "type": "list.item",
         },
         ListItem {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "whitespace",
-              "value": "
-",
-            },
-          ],
+          "children": Array [],
           "content": "Banana
 ",
           "indent": 0,
@@ -519,13 +479,6 @@ Node {
           "value": "console.log('footnote with code block')
 ",
         },
-        Node {
-          "children": Array [],
-          "parent": [Circular],
-          "type": "whitespace",
-          "value": "
-",
-        },
       ],
       "label": "1",
       "parent": [Circular],
@@ -560,15 +513,7 @@ Node {
           "type": "list.item",
         },
         ListItem {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "whitespace",
-              "value": "
-",
-            },
-          ],
+          "children": Array [],
           "content": "Orange
 ",
           "indent": 0,
@@ -612,15 +557,7 @@ Node {
           "type": "list.item",
         },
         ListItem {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "whitespace",
-              "value": "
-",
-            },
-          ],
+          "children": Array [],
           "content": "it's apple
 ",
           "indent": 0,
@@ -678,13 +615,6 @@ key2: value 2
           "tags": Array [],
           "type": "headline",
         },
-        Node {
-          "children": Array [],
-          "parent": [Circular],
-          "type": "whitespace",
-          "value": "
-",
-        },
       ],
       "level": 1,
       "parent": [Circular],
@@ -715,7 +645,6 @@ Node {
               "parent": [Circular],
               "type": "text",
               "value": "Content of the footnote.
-
 ",
             },
           ],
@@ -766,13 +695,6 @@ Node {
 <p>world!</p>
 ",
     },
-    Node {
-      "children": Array [],
-      "parent": [Circular],
-      "type": "whitespace",
-      "value": "
-",
-    },
   ],
   "meta": Object {},
   "type": "root",
@@ -807,13 +729,6 @@ Node {
       "value": "console.log('hello world.')
 ",
     },
-    Node {
-      "children": Array [],
-      "parent": [Circular],
-      "type": "whitespace",
-      "value": "
-",
-    },
   ],
   "meta": Object {},
   "type": "root",
@@ -846,13 +761,6 @@ Node {
       "parent": [Circular],
       "type": "block",
       "value": "console.log('hello world.')
-",
-    },
-    Node {
-      "children": Array [],
-      "parent": [Circular],
-      "type": "whitespace",
-      "value": "
 ",
     },
   ],
@@ -901,7 +809,6 @@ And here is ",
               "parent": [Circular],
               "type": "text",
               "value": " line.
-
 ",
             },
           ],
@@ -967,15 +874,7 @@ Node {
           "type": "list.item",
         },
         ListItem {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "whitespace",
-              "value": "
-",
-            },
-          ],
+          "children": Array [],
           "content": "Banana
 ",
           "indent": 0,
@@ -1030,13 +929,6 @@ Node {
           "priority": undefined,
           "tags": Array [],
           "type": "headline",
-        },
-        Node {
-          "children": Array [],
-          "parent": [Circular],
-          "type": "whitespace",
-          "value": "
-",
         },
       ],
       "level": 1,
@@ -1224,13 +1116,6 @@ Node {
               "tags": Array [],
               "type": "headline",
             },
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "whitespace",
-              "value": "
-",
-            },
           ],
           "level": 2,
           "parent": [Circular],
@@ -1309,15 +1194,7 @@ Node {
           "type": "list.item",
         },
         ListItem {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "whitespace",
-              "value": "
-",
-            },
-          ],
+          "children": Array [],
           "content": "orange
 ",
           "indent": 0,
@@ -1371,15 +1248,7 @@ Node {
           "type": "list.item",
         },
         ListItem {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "whitespace",
-              "value": "
-",
-            },
-          ],
+          "children": Array [],
           "content": "orange
 ",
           "indent": 0,
@@ -1419,7 +1288,6 @@ Node {
           "value": "this is line one.
 this is line two.
 this is line three.
-
 ",
         },
       ],
@@ -1692,13 +1560,6 @@ Node {
           ],
           "parent": [Circular],
           "type": "table.row",
-        },
-        Node {
-          "children": Array [],
-          "parent": [Circular],
-          "type": "whitespace",
-          "value": "
-",
         },
         Node {
           "children": Array [],
@@ -2042,13 +1903,6 @@ Node {
           "value": "
 ",
         },
-        Node {
-          "children": Array [],
-          "parent": [Circular],
-          "type": "whitespace",
-          "value": "
-",
-        },
       ],
       "parent": [Circular],
       "type": "table",
@@ -2108,7 +1962,6 @@ Node {
               "parent": [Circular],
               "type": "text",
               "value": "Paragraph
-
 ",
             },
           ],
@@ -2159,15 +2012,7 @@ Node {
           "type": "list.item",
         },
         ListItem {
-          "children": Array [
-            Node {
-              "children": Array [],
-              "parent": [Circular],
-              "type": "whitespace",
-              "value": "
-",
-            },
-          ],
+          "children": Array [],
           "content": "orange
 ",
           "indent": 0,
@@ -2229,7 +2074,6 @@ still belongs to fn:1
           "parent": [Circular],
           "type": "text",
           "value": "This is not.
-
 ",
         },
       ],
@@ -2282,7 +2126,6 @@ And here is another line.
               "parent": [Circular],
               "type": "text",
               "value": "another footnote.
-
 ",
             },
           ],
@@ -2348,13 +2191,6 @@ And here is another line.
           "priority": undefined,
           "tags": Array [],
           "type": "headline",
-        },
-        Node {
-          "children": Array [],
-          "parent": [Circular],
-          "type": "whitespace",
-          "value": "
-",
         },
       ],
       "level": 1,
@@ -2549,7 +2385,6 @@ the round pegs in the ",
               "parent": [Circular],
               "type": "text",
               "value": " square holes...
-
 ",
             },
           ],
