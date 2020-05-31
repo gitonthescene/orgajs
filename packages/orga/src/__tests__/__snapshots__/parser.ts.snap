@@ -334,7 +334,6 @@ Node {
     List {
       "children": Array [
         ListItem {
-          "bodyIndent": 2,
           "children": Array [
             Node {
               "children": Array [
@@ -342,9 +341,9 @@ Node {
                   "children": Array [],
                   "parent": [Circular],
                   "type": "text",
-                  "value": "Cupertino, California that designs, develops, and sells consumer electronics,
+                  "value": "  Cupertino, California that designs, develops, and sells consumer electronics,
 
-computer software, and online services.
+  computer software, and online services.
 ",
                 },
               ],
@@ -933,7 +932,6 @@ Node {
     List {
       "children": Array [
         ListItem {
-          "bodyIndent": 2,
           "children": Array [
             Node {
               "children": Array [
@@ -941,8 +939,8 @@ Node {
                   "children": Array [],
                   "parent": [Circular],
                   "type": "text",
-                  "value": "Cupertino, California that designs, develops, and sells consumer electronics,
-computer software, and online services.
+                  "value": "  Cupertino, California that designs, develops, and sells consumer electronics,
+  computer software, and online services.
 ",
                 },
               ],
@@ -1262,7 +1260,6 @@ Node {
     List {
       "children": Array [
         ListItem {
-          "bodyIndent": 2,
           "children": Array [
             List {
               "children": Array [

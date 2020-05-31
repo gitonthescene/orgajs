@@ -11,7 +11,6 @@ class ListItem extends Node {
   ordered: boolean
   content: string
   indent: number
-  bodyIndent: number
   checked: boolean
   tag?: string
 }
@@ -35,8 +34,13 @@ export default function(token, section: Node): Node {
       const lineIndent = raw.search(/\S/)
       if (name !== `blank`) {
         if (lineIndent <= indent) break
-        item.bodyIndent = item.bodyIndent || lineIndent;
-        token.raw = token.raw.substr(item.bodyIndent)
+        if (![`line`, `list.item`].includes(name)) {
+          tokens.push({name:`blank`, raw: raw.substr(indent,lineIndent-indent)})
+        } else if ( name === `list.item` ) {
+          token.data.indent = lineIndent - indent;
+        }
+
+        token.raw = raw.substr(indent)
       }
       tokens.push(token)
       self.consume()

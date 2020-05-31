@@ -13,13 +13,12 @@ function serializeText(ctx, node, index, parent) {
   var indent = "";
   if (node.type == "list") {
     var indent = "";
-    var ret = inner ? indent + inner.join(`\n${indent}`) + "\n" : "";
+    var ret = inner.length > 0 ? inner.join(`\n${indent}`) + "\n" : "";
     return ret;
   } else {
     var indent = " ".repeat(node.indent);
-    var bodyIndent = " ".repeat(node.bodyIndent);
     if (inner.length > 0) {
-      inner = bodyIndent + inner.join(`\n${bodyIndent}`) + "\n";
+      inner = indent + inner.join(`\n${indent}`) + "\n";
     } else inner = "";
   }
   var checked =
