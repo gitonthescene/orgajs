@@ -10,13 +10,16 @@ function serializeText(ctx, node, index, parent) {
       : { ...ctx };
   var orig = all(newctxt, node);
   var inner = orig ? orig.replace(/\r\n|\n$/, "").split(/\r\n|\n/) : [];
-  var indent = "";
+  var indent;
+  var content;
   if (node.type == "list") {
-    var indent = "";
+    indent = "";
     var ret = inner.length > 0 ? inner.join(`\n${indent}`) + "\n" : "";
     return ret;
   } else {
-    var indent = " ".repeat(node.indent);
+    content = node.content;
+    if (node.tag) content = `${node.tag} :: ${content}`;
+    indent = " ".repeat(node.indent);
     if (inner.length > 0) {
       inner = indent + inner.join(`\n${indent}`) + "\n";
     } else inner = "";
@@ -25,5 +28,5 @@ function serializeText(ctx, node, index, parent) {
     node.checked === true ? "[X] " : node.checked == false ? "[ ] " : "";
 
   var bullet = node.ordered ? `${index + 1}.` : "-";
-  return `${indent}${bullet} ${checked}${node.content}${inner}`;
+  return `${indent}${bullet} ${checked}${content}${inner}`;
 }

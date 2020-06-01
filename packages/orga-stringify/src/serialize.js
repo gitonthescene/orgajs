@@ -27,7 +27,12 @@ handlers.table = require("./table");
 handlers.text = require("./text");
 handlers.underline = require("./text");
 handlers.verbatim = require("./text");
+handlers.code = require("./text");
+handlers.planning = require("./text");
 handlers.whitespace = require("./text");
+handlers["footnote.definition"] = require("./text");
+handlers.drawer = require("./drawer");
+handlers.timestamp = require("./timestamp");
 
 function serialize(ctx, node, index, parent) {
   var handlers = ctx.handlers;
