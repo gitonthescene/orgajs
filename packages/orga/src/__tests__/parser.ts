@@ -22,7 +22,7 @@ the round pegs in the +round+ square holes...
     expect(document).toMatchSnapshot()
   })
 
-  it(`can handle blocks`, () => {
+  it('can handle blocks', () => {
     const content = `
 * headline
 #+BEGIN_SRC javascript
@@ -33,7 +33,7 @@ console.log('world')
     expect(parser.parse(content)).toMatchSnapshot()
   })
 
-  it(`can handle broken blocks`, () => {
+  it('can handle broken blocks', () => {
     const endLess = `
 * headline
 #+BEGIN_SRC javascript
