@@ -10,10 +10,6 @@ function parseBlock() {
     if ( t.name === `headline` ) { return undefined }
     var eol = this.eatNewline() || '';
     if (t.name === `block.end` && t.data.type.toUpperCase() === type.toUpperCase() ) {
-      if (t.data.type.toUpperCase() === `EXPORT`) {
-        const format = params[0]
-        return new Node(format).with({ value: lines.join(``) })
-      }
       return new Node('block').with({ name: type.toUpperCase(), params, value: lines.join(``) })
     }
     lines.push(t.raw+eol)

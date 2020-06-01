@@ -12,9 +12,9 @@ function _process(token, section) {
     self.consume();
     blank = self.peek();
   }
+  section.push(new Node('whitespace').with({ value: blankSpace }));
   if (section.type === `footnote.definition` && self._cel > 1) return section
   self._aks = {}
-  section.push(new Node('whitespace').with({ value: blankSpace }));
   return self.parseSection(section)
 }
 

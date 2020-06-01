@@ -13,8 +13,6 @@ function process(token, section) {
     this.lexer.updateTODOs(section.meta.todos)
     break
   case `HTML`:
-    section.push(new Node(`html`).with({ value }))
-    break
   case `CAPTION`:
   case `HEADER`:
   case `NAME`:
