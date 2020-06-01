@@ -681,12 +681,6 @@ Node {
   "children": Array [
     Node {
       "children": Array [],
-      "parent": [Circular],
-      "type": "html",
-      "value": "<h1>Hello</h1>",
-    },
-    Node {
-      "children": Array [],
       "key": "HTML",
       "parent": [Circular],
       "type": "keyword",
@@ -710,8 +704,12 @@ Node {
     },
     Node {
       "children": Array [],
+      "name": "EXPORT",
+      "params": Array [
+        "html",
+      ],
       "parent": [Circular],
-      "type": "html",
+      "type": "block",
       "value": "<h1>hello</h1>
 <p>world!</p>
 ",
@@ -2110,6 +2108,13 @@ still belongs to fn:1
           ],
           "parent": [Circular],
           "type": "paragraph",
+        },
+        Node {
+          "children": Array [],
+          "parent": [Circular],
+          "type": "whitespace",
+          "value": "
+",
         },
       ],
       "label": "1",
