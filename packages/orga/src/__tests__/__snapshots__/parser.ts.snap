@@ -1416,21 +1416,7 @@ Node {
         Node {
           "children": Array [],
           "parent": [Circular],
-          "type": "whitespace",
-          "value": "
-",
-        },
-        Node {
-          "children": Array [],
-          "parent": [Circular],
           "type": "table.separator",
-        },
-        Node {
-          "children": Array [],
-          "parent": [Circular],
-          "type": "whitespace",
-          "value": "
-",
         },
         Node {
           "children": Array [
@@ -1487,13 +1473,6 @@ Node {
           "type": "table.row",
         },
         Node {
-          "children": Array [],
-          "parent": [Circular],
-          "type": "whitespace",
-          "value": "
-",
-        },
-        Node {
           "children": Array [
             Node {
               "children": Array [
@@ -1548,13 +1527,6 @@ Node {
           "type": "table.row",
         },
         Node {
-          "children": Array [],
-          "parent": [Circular],
-          "type": "whitespace",
-          "value": "
-",
-        },
-        Node {
           "children": Array [
             Node {
               "children": Array [
@@ -1607,13 +1579,6 @@ Node {
           ],
           "parent": [Circular],
           "type": "table.row",
-        },
-        Node {
-          "children": Array [],
-          "parent": [Circular],
-          "type": "whitespace",
-          "value": "
-",
         },
       ],
       "parent": [Circular],
@@ -1694,21 +1659,7 @@ Node {
         Node {
           "children": Array [],
           "parent": [Circular],
-          "type": "whitespace",
-          "value": "
-",
-        },
-        Node {
-          "children": Array [],
-          "parent": [Circular],
           "type": "table.separator",
-        },
-        Node {
-          "children": Array [],
-          "parent": [Circular],
-          "type": "whitespace",
-          "value": "
-",
         },
         Node {
           "children": Array [
@@ -1788,13 +1739,6 @@ Node {
           "type": "table.row",
         },
         Node {
-          "children": Array [],
-          "parent": [Circular],
-          "type": "whitespace",
-          "value": "
-",
-        },
-        Node {
           "children": Array [
             Node {
               "children": Array [
@@ -1866,13 +1810,6 @@ Node {
           "type": "table.row",
         },
         Node {
-          "children": Array [],
-          "parent": [Circular],
-          "type": "whitespace",
-          "value": "
-",
-        },
-        Node {
           "children": Array [
             Node {
               "children": Array [
@@ -1942,13 +1879,6 @@ Node {
           ],
           "parent": [Circular],
           "type": "table.row",
-        },
-        Node {
-          "children": Array [],
-          "parent": [Circular],
-          "type": "whitespace",
-          "value": "
-",
         },
       ],
       "parent": [Circular],
