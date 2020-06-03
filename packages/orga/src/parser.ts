@@ -2,6 +2,7 @@ import defaultOptions, { ParseOptions } from './options'
 
 import Lexer from './lexer'
 import Node from './node'
+import * as config from './version.json'
 
 declare namespace orga {
 
@@ -34,7 +35,7 @@ class OrgaParser implements orga.Parser {
 
   parse(text: string): Node {
     const self = this
-    const document = new Node('root').with({ meta: {} })
+    const document = new Node('root').with({ meta: { oastVersion: config.oastVersion } })
     self.cursor = -1
     self.linecursor = -1
     self.lines = text ? text.split(/\r\n|\n/) : [] // TODO: more robust lines?
