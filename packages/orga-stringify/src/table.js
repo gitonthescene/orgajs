@@ -4,7 +4,7 @@ var all = require("./all");
 module.exports = serializeText;
 
 function serializeText(ctx, node, index, parent) {
-  var rows = node.children; //.filter((nd) => nd.type !== "whitespace");
+  var rows = node.children;
   var contents = [];
   var samplerow;
   rows.forEach((row) => {
@@ -14,7 +14,7 @@ function serializeText(ctx, node, index, parent) {
     } else if (row.type === "table.separator") {
       contents.push(["separator"]);
     } else {
-      contents.push(["whitespace", row.value]);
+      throw "Unexpected node in table: " + row.type;
     }
   });
   // What about misshapen tables?  Maybe render as a block??
@@ -27,9 +27,7 @@ function serializeText(ctx, node, index, parent) {
   var txt = "";
   contents.forEach(([typ, row]) => {
     if (typ === "separator") {
-      txt += `${separator}`;
-    } else if (typ === "whitespace") {
-      txt += row;
+      txt += `${separator}\n`;
     } else {
       txt += `|${row
         .map((cell, i) => {
@@ -37,7 +35,7 @@ function serializeText(ctx, node, index, parent) {
             isNaN(cell) ? cell.padEnd(dims[i]) : cell.padStart(dims[i])
           } `;
         })
-        .join("|")}|`;
+        .join("|")}|\n`;
     }
   });
   return txt;
