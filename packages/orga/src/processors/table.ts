@@ -12,6 +12,7 @@ function process(token, section) {
       if (token.name === `blank`) {
         self.eatNewline()
         token = self.peek()
+        if (!self.hasNext() ) break
       }
       if ( !token.name.startsWith(`table.`) ) break
       self.consume()

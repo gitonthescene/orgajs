@@ -91,9 +91,9 @@ class OrgaParser implements orga.Parser {
 
   eatNewline() {
     // Eat trailing new line
-    // @@DAM how do we reach the end of the stream?
+    if (!this.hasNext()) return undefined;
     var token = this.peek()
-    if (token && token.name === `blank` && token.raw === `\n`) {
+    if (token.name === `blank` && token.raw === `\n`) {
       this.consume()
       return token.raw
     }

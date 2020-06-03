@@ -3,11 +3,10 @@ import Node from '../node'
 function _process(token, section) {
   const self = this
 
-  // @@DAM how do we reach the end of the stream?
   var blankSpace = '';
   var blank = token
-  while(blank && blank.name === `blank`) {
-    if (token.raw === `\n`) self._cel++
+  while(self.hasNext() && blank.name === `blank`) {
+    if (blank.raw === `\n`) self._cel++
     blankSpace += blank.raw;
     self.consume();
     blank = self.peek();
