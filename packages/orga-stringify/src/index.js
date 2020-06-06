@@ -21,6 +21,7 @@ function stringify(config) {
 
   function compiler(tree) {
     if (config.toJSON) return JSON.stringify(tree, getCircularReplacer(), 2);
-    return serialize(config, tree);
+    // Use attached handlers.  Handlers passed in the config override.
+    return serialize({ handlers: compiler.handlers, ...config }, tree);
   }
 }

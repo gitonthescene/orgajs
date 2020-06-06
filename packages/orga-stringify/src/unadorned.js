@@ -1,5 +1,5 @@
 module.exports = attacher;
-var all = require("orga-stringify/lib/all");
+var all = require("orga-stringify/lib/handlers/all");
 
 function rawValue(ctx, node, index, parent) {
   return all(ctx, node);
