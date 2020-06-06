@@ -1,5 +1,5 @@
 "use strict";
-var serialize = require("./serialize");
+var serialize = require("../serialize");
 
 module.exports = serializeText;
 

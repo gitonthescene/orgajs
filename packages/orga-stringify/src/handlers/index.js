@@ -1,0 +1,28 @@
+"use strict";
+
+module.exports = {
+  block: require("./block"),
+  bold: require("./text"),
+  comment: require("./text"),
+  headline: require("./headline"),
+  horizontalRule: require("./text"),
+  italic: require("./text"),
+  keyword: require("./text"),
+  link: require("./link"),
+  list: require("./list"),
+  ["list.item"]: require("./list"),
+  paragraph: require("./all"),
+  root: require("./all"),
+  section: require("./all"),
+  strikeThrough: require("./text"),
+  table: require("./table"),
+  text: require("./text"),
+  underline: require("./text"),
+  verbatim: require("./text"),
+  code: require("./text"),
+  planning: require("./text"),
+  whitespace: require("./text"),
+  ["footnote.definition"]: require("./text"),
+  drawer: require("./drawer"),
+  timestamp: require("./timestamp"),
+};
