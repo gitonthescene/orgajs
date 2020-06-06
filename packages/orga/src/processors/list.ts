@@ -1,5 +1,4 @@
 import Node from '../node'
-const inlineParse = require('../inline').parse
 import OrgaParser from '../parser';
 
 class List extends Node {
