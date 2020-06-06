@@ -12,4 +12,3 @@ function serialize(config, tree) {
   config.handlers = { ...handlers, ...config.handlers };
   return one(config, tree);
 }
-serialize.handlers = handlers;
