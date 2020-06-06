@@ -9,7 +9,7 @@ const POST = `(?:[\\s-\\.,:!?'\\)}]|$)`
 const BORDER = `[^,'"\\s]`
 
 function markup(marker: string) {
-  return RegExp(`(.*?${PRE})${marker}(${BORDER}(?:.*?(?:${BORDER}))??)${marker}(${POST}.*)`, 'm')
+  return RegExp(`(.*?${PRE})${marker}(${BORDER}(?:.*?(?:${BORDER}))??)${marker}(${POST}.*)`, 'sm')
 }
 
 export const parse = (text: string) => {
@@ -36,6 +36,9 @@ export const parse = (text: string) => {
       return new Node(name, captures[0])
     })
   }
+  if (typeof text === `string`)
+    return [new Node(`text`).with({ value: text })]
+
   return text
 }
 
@@ -43,7 +46,7 @@ export const parse = (text: string) => {
 function _parse(pattern, text, post) {
   if (typeof text === `string`) {
     const m = pattern.exec(text)
-    if (!m) return [new Node(`text`).with({ value: text })]
+    if (!m) return text
     m.shift()
     const before = m.shift()
     const after = m.pop()

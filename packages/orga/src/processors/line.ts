@@ -4,6 +4,7 @@ const inlineParse = require('../inline').parse
 function process(token, section) {
 
   let nodes = []
+  var text = []
   while (this.hasNext()) {
     const token = this.peek()
     if (!token) break;
@@ -14,8 +15,9 @@ function process(token, section) {
     this._cel = (token.name === `blank` && token.raw === `\n`) ? this._cel+1 : 0;
     if (section.type === `footnote.definition` && this._cel > 2) break    
     this.consume()
-    push(token.raw)
+    text.push(token.raw)
   }
+  push(text.join(``))
   section.push(new Node(`paragraph`, nodes))
 
   this._aks = {}
