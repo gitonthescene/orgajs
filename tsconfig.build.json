@@ -15,7 +15,8 @@
     "declaration": true,
     "lib": [
       "es7"
-    ]
+    ],
+    "resolveJsonModule": true
   },
   "exclude": [
     "node_modules",
