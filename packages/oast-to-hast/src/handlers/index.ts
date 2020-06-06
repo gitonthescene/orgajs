@@ -15,8 +15,11 @@ import list from './list'
 import listItem from './listItem'
 import { table, tableRow, tableCell } from './table'
 import horizontalRule from './horizontal-rule'
-import html from './html'
+import keyword from './keyword'
 import paragraph from './paragraph'
+
+var whitespace = () => null;
+var comment = () => null;
 
 import {
   definition as fnDef,
@@ -43,7 +46,6 @@ export default {
   "table.row": tableRow,
   "table.cell": tableCell,
   horizontalRule,
-  html,
   "footnote.definition": fnDef,
   "footnote.reference": fnRef,
   drawer: () => undefined,

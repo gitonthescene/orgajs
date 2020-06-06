@@ -4,6 +4,8 @@ import highlight from './_highlight'
 export default (h, node) => {
   const name = node.name.toUpperCase()
   switch(name) {
+  case `HTML`:
+    return u('raw', node.value)
   case `SRC`:
     return src(h, node)
   case `QUOTE`:
