@@ -25,6 +25,11 @@ function process(token, section) {
       const row = new Node(`table.row`, cells)
       table.push(row)
     }
+    if ( token.name === `keyword` && token.data.key === "TBLFM" ) {
+      const tblfm = new Node(`keyword`).with(token.data);
+      table.push( tblfm );
+      self.consume()
+    }
     return table
   }
 
