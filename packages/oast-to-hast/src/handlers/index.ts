@@ -49,5 +49,6 @@ export default {
   "footnote.definition": fnDef,
   "footnote.reference": fnRef,
   drawer: () => undefined,
+  whitespace,
   comment,
 }
