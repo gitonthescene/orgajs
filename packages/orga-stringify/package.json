@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": "https://github.com/orgapp/orgajs/tree/master/packages/orga-stringify",
   "scripts": {
-    "build": "npm run clean && mkdir ./lib && cp ./src/*.js ./lib",
+    "build": "npm run clean && rsync -avz -f '+ *.js' -f '+ **/' -f '- *' src/ lib",
     "prepare": "cross-env NODE_ENV=production npm run build",
     "clean": "rm -rf ./lib"
   },

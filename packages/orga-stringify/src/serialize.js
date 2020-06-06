@@ -2,21 +2,14 @@
 "use strict";
 
 module.exports = serialize;
+var one = require("./one");
 
 var own = {}.hasOwnProperty;
 // default handlers
 var handlers = require("./handlers");
 
-function serialize(ctx, node, index, parent) {
-  var handlers = ctx.handlers;
-  var type = node && node.type;
-  if (!type) {
-    throw new Error("Expected node, not `" + node + "`");
-  }
-
-  if (!own.call(handlers, type)) {
-    throw new Error("Cannot compile unknown node `" + type + "`");
-  }
-  return handlers[type](ctx, node, index, parent);
+function serialize(config, tree) {
+  config.handlers = { ...handlers, ...config.handlers };
+  return one(config, tree);
 }
 serialize.handlers = handlers;

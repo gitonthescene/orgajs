@@ -1,6 +1,6 @@
 "use strict";
 
-var serialize = require("../serialize");
+var one = require("../one");
 
 module.exports = all;
 
@@ -12,7 +12,7 @@ function all(ctx, parent) {
   var results = [];
 
   while (++index < length) {
-    results[index] = serialize(ctx, children[index], index, parent);
+    results[index] = one(ctx, children[index], index, parent);
   }
 
   return results.join("");
