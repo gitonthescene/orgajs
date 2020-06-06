@@ -18,7 +18,7 @@ const getCircularReplacer = () => {
 // Attach
 function stringify(config) {
   this.Compiler = compiler;
-
+  config = config || {};
   function compiler(tree) {
     if (config.toJSON) return JSON.stringify(tree, getCircularReplacer(), 2);
     // Use attached handlers.  Handlers passed in the config override.
