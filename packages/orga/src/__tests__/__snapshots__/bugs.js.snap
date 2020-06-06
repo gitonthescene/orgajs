@@ -65,6 +65,7 @@ Node {
     },
   ],
   "meta": Object {
+    "oastVersion": "1.0",
     "todos": Array [
       "(whatever",
       "keyword)",
