@@ -1,18 +1,27 @@
 import Node from '../node'
+import OrgaParser from '../parser';
 
 function parseBlock() {
   const t = this.next()
   const { data: { type, params } } = t
-  const lines = []
+  const tokens = []
   this.eatNewline();
   while (this.hasNext()) {
     const t = this.next()
     if ( t.name === `headline` ) { return undefined }
-    var eol = this.eatNewline() || '';
+    var eol = this.eatNewline();
     if (t.name === `block.end` && t.data.type.toUpperCase() === type.toUpperCase() ) {
-      return new Node('block').with({ name: type.toUpperCase(), params, value: lines.join(``) })
+      var block = new Node('block').with({ name: type.toUpperCase(), params })
+
+      var innerParser = new OrgaParser( this.options )
+      innerParser.tokens = tokens
+      var root = innerParser.parse('')
+      root.children.forEach(nd => block.push(nd));
+
+      return block
     }
-    lines.push(t.raw+eol)
+    tokens.push(t)
+    if (eol) tokens.push({name:`blank`, raw: eol})
   }
   return undefined
 }
