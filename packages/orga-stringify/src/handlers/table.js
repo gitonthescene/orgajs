@@ -7,12 +7,15 @@ function serializeText(ctx, node, index, parent) {
   var rows = node.children;
   var contents = [];
   var samplerow;
+  var tblfm;
   rows.forEach((row) => {
     if (row.type === "table.row") {
       samplerow = row.children.map((cell) => all(ctx, cell));
       contents.push(["row", samplerow]);
     } else if (row.type === "table.separator") {
       contents.push(["separator"]);
+    } else if (row.type === "keyword") {
+      tblfm = row;
     } else {
       throw "Unexpected node in table: " + row.type;
     }
@@ -38,5 +41,8 @@ function serializeText(ctx, node, index, parent) {
         .join("|")}|\n`;
     }
   });
+  if (tblfm) {
+    return txt + ctx.handlers.keyword(ctx, tblfm);
+  }
   return txt;
 }
