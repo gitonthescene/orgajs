@@ -12,16 +12,18 @@ function markup(marker: string) {
   return RegExp(`(.*?${PRE})${marker}(${BORDER}(?:.*?(?:${BORDER}))??)${marker}(${POST}.*)`, 'sm')
 }
 
-export const parse = (text: string) => {
-  text = _parse(LINK_PATTERN, text, (captures) => {
+export const parse = (text: string|any[]) => {
+  var nodes = _parse(LINK_PATTERN, text, (captures) => {
     return new Node(`link`)
       .with({ uri: uri(captures[0]), desc: captures[1] })
   })
+  if (Array.isArray(nodes)) return nodes
 
-  text = _parse(FOOTNOTE_PATTERN, text, (captures) => {
+  nodes = _parse(FOOTNOTE_PATTERN, text, (captures) => {
     return new Node(`footnote.reference`)
       .with({ label: captures[0] })
   })
+  if (Array.isArray(nodes)) return nodes
 
   const markups = [
     { name: `bold`, marker: `\\*` },
@@ -32,14 +34,12 @@ export const parse = (text: string) => {
     { name: `code`, marker: `~` },
   ]
   for (const { name, marker } of markups) {
-    text = _parse(markup(marker), text, (captures) => {
+    nodes = _parse(markup(marker), text, (captures) => {
       return new Node(name, captures[0])
     })
+    if (Array.isArray(nodes)) return nodes
   }
-  if (typeof text === `string`)
-    return [new Node(`text`).with({ value: text })]
-
-  return text
+  return [new Node(`text`).with({ value: text })]
 }
 
 
@@ -52,29 +52,17 @@ function _parse(pattern, text, post) {
     const after = m.pop()
     let nodes = []
     if ( before.length > 0 ) {
-      nodes.push(new Node(`text`).with({ value: before }))
+      nodes = nodes.concat(parse(before))
     }
     if (m.length > 0) {
       nodes.push(post(m))
       // nodes.push(new Node(name).with({ value: match }))
     }
     if (after) {
-      nodes = nodes.concat(_parse(pattern, after, post))
+      nodes = nodes.concat(parse(after))
     }
     return nodes
   }
 
-  if (Array.isArray(text)) {
-    return text.reduce((all, node) => {
-      if (node.hasOwnProperty(`type`) && node.type !== `text`) {
-        return all.concat(node)
-      }
-      return all.concat(_parse(pattern, node, post))
-    }, [])
-  }
-
-  if (typeof text.value === `string`) {
-    return _parse(pattern, text.value, post)
-  }
-  return undefined
+ return undefined
 }
