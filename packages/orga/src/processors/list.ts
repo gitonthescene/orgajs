@@ -45,7 +45,6 @@ export default function(token, section: Node): Node {
       tokens.push(token)
       self.consume()
     }
-    // Probably better collect the tokens and pass them on than reparsing
     var innerParser = new OrgaParser( this.options )
     innerParser.tokens = tokens
     var root = innerParser.parse('')
