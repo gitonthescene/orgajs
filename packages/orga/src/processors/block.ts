@@ -11,7 +11,7 @@ function parseBlock() {
     if ( t.name === `headline` ) { return undefined }
     var eol = this.eatNewline();
     if (t.name === `block.end` && t.data.type.toUpperCase() === type.toUpperCase() ) {
-      var block = new Node('block').with({ name: type.toUpperCase(), params })
+      const block = new Node('block').with({ name: type.toUpperCase(), params })
 
       var innerParser = new OrgaParser( this.options )
       innerParser.tokens = tokens

@@ -12,8 +12,8 @@ type Rule = {
 class Syntax {
   rules: Rule[]
 
-  constructor() {
-    this.rules = []
+  constructor(rules=[]) {
+    this.rules = rules.map( rule => {return {...rule}} )
   }
 
   define(name: string,
@@ -132,7 +132,7 @@ export default class Lexer {
   options: ParseOptions
 
   constructor(options: ParseOptions) {
-    this.syntax = org
+    this.syntax = new Syntax(org.rules)
     this.options = { ...defaultOptions, ...options }
     const { todos } = this.options
     if (todos) {
