@@ -81,15 +81,27 @@ Node {
       "attributes": Object {
         "NAME": "code_block",
       },
-      "children": Array [],
+      "children": Array [
+        Node {
+          "children": Array [
+            Node {
+              "children": Array [],
+              "parent": [Circular],
+              "type": "text",
+              "value": "console.log('hello world.')
+",
+            },
+          ],
+          "parent": [Circular],
+          "type": "paragraph",
+        },
+      ],
       "name": "SRC",
       "params": Array [
         "javascript",
       ],
       "parent": [Circular],
       "type": "block",
-      "value": "console.log('hello world.')
-",
     },
   ],
   "meta": Object {
@@ -128,16 +140,28 @@ Node {
           "type": "headline",
         },
         Node {
-          "children": Array [],
+          "children": Array [
+            Node {
+              "children": Array [
+                Node {
+                  "children": Array [],
+                  "parent": [Circular],
+                  "type": "text",
+                  "value": "console.log('hello')
+console.log('world')
+",
+                },
+              ],
+              "parent": [Circular],
+              "type": "paragraph",
+            },
+          ],
           "name": "SRC",
           "params": Array [
             "javascript",
           ],
           "parent": [Circular],
           "type": "block",
-          "value": "console.log('hello')
-console.log('world')
-",
         },
       ],
       "level": 1,
@@ -498,15 +522,27 @@ Node {
           "type": "paragraph",
         },
         Node {
-          "children": Array [],
+          "children": Array [
+            Node {
+              "children": Array [
+                Node {
+                  "children": Array [],
+                  "parent": [Circular],
+                  "type": "text",
+                  "value": "console.log('footnote with code block')
+",
+                },
+              ],
+              "parent": [Circular],
+              "type": "paragraph",
+            },
+          ],
           "name": "SRC",
           "params": Array [
             "javascript",
           ],
           "parent": [Circular],
           "type": "block",
-          "value": "console.log('footnote with code block')
-",
         },
       ],
       "label": "1",
@@ -730,16 +766,28 @@ Node {
 ",
     },
     Node {
-      "children": Array [],
+      "children": Array [
+        Node {
+          "children": Array [
+            Node {
+              "children": Array [],
+              "parent": [Circular],
+              "type": "text",
+              "value": "<h1>hello</h1>
+<p>world!</p>
+",
+            },
+          ],
+          "parent": [Circular],
+          "type": "paragraph",
+        },
+      ],
       "name": "EXPORT",
       "params": Array [
         "html",
       ],
       "parent": [Circular],
       "type": "block",
-      "value": "<h1>hello</h1>
-<p>world!</p>
-",
     },
   ],
   "meta": Object {
@@ -774,15 +822,27 @@ Node {
 ",
     },
     Node {
-      "children": Array [],
+      "children": Array [
+        Node {
+          "children": Array [
+            Node {
+              "children": Array [],
+              "parent": [Circular],
+              "type": "text",
+              "value": "console.log('hello world.')
+",
+            },
+          ],
+          "parent": [Circular],
+          "type": "paragraph",
+        },
+      ],
       "name": "SRC",
       "params": Array [
         "javascript",
       ],
       "parent": [Circular],
       "type": "block",
-      "value": "console.log('hello world.')
-",
     },
   ],
   "meta": Object {
@@ -810,15 +870,27 @@ Node {
       "value": "code_block",
     },
     Node {
-      "children": Array [],
+      "children": Array [
+        Node {
+          "children": Array [
+            Node {
+              "children": Array [],
+              "parent": [Circular],
+              "type": "text",
+              "value": "console.log('hello world.')
+",
+            },
+          ],
+          "parent": [Circular],
+          "type": "paragraph",
+        },
+      ],
       "name": "SRC",
       "params": Array [
         "javascript",
       ],
       "parent": [Circular],
       "type": "block",
-      "value": "console.log('hello world.')
-",
     },
   ],
   "meta": Object {

@@ -5,7 +5,8 @@ Array [
   Node {
     "children": Array [],
     "type": "text",
-    "value": "Special characters ",
+    "value": "
+Special characters ",
   },
   Node {
     "children": Array [
@@ -69,7 +70,8 @@ Array [
   Node {
     "children": Array [],
     "type": "text",
-    "value": " thing.",
+    "value": " thing.
+",
   },
 ]
 `;
@@ -338,6 +340,12 @@ exports[`Inline Parsing recon mixed emphasis 1`] = `
 Array [
   Node {
     "children": Array [],
+    "type": "text",
+    "value": "
+",
+  },
+  Node {
+    "children": Array [],
     "desc": "Here's",
     "type": "link",
     "uri": Object {
@@ -429,7 +437,8 @@ Array [
   Node {
     "children": Array [],
     "type": "text",
-    "value": " square holes...",
+    "value": " square holes...
+",
   },
 ]
 `;
