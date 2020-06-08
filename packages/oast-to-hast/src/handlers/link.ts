@@ -11,10 +11,10 @@ export default (h, node) => {
 
   const type = mime.getType(uri.raw)
   if (type && type.startsWith(`image`)) {
-    props = { src: uri.raw, alt: desc }
+    props = { src: uri.raw, alt: desc || uri.raw }
     return h(node, `img`, props)
   }
   return h(node, `a`, props, [
-    u(`text`, desc)
+    u(`text`, desc || uri.raw)
   ])
 }

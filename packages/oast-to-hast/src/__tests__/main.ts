@@ -16,7 +16,11 @@ describe('Main', () => {
           u('text', 'Some more text.'),
         ])
       ]),
-      u('block', { name: 'SRC', params: ['javascript'] }, 'console.log("hello world")')
+      u('block', { name: 'SRC', params: ['javascript'] }, [
+        u('paragraph', [
+          u('text', 'console.log("hello world")'),
+        ])
+      ])
     ])
 
     expect(toHAST(org)).toMatchSnapshot()
