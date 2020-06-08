@@ -32,11 +32,14 @@ export default function(token, section: Node): Node {
       if (!token) break;
       const { name, raw } = token
       const lineIndent = raw.search(/\S/)
-      if (name !== `blank`) {
+      if (name === `blank`) {
+        var blankIndent = raw.search(/\n/)
+        if (blankIndent === -1) blankIndent = raw.length
+        const stripcnt = Math.max(blankIndent - indent, blankIndent)
+        token.raw = raw.substr(stripcnt)
+      } else {
         if (lineIndent <= indent) break
-        if (![`line`, `list.item`].includes(name)) {
-          tokens.push({name:`blank`, raw: raw.substr(indent,lineIndent-indent)})
-        } else if ( name === `list.item` ) {
+        if ( name === `list.item` ) {
           token.data.indent = lineIndent - indent;
         }
 

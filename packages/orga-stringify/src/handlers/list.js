@@ -6,7 +6,10 @@ module.exports = serializeText;
 function serializeText(ctx, node, index, parent) {
   var newctxt =
     node.type === "list"
-      ? { ...ctx, level: (ctx.level === undefined ? -1 : ctx.level) + 1 }
+      ? {
+          ...ctx,
+          listLevel: (ctx.listLevel === undefined ? -1 : ctx.listLevel) + 1,
+        }
       : { ...ctx };
   var orig = all(newctxt, node);
   var inner = orig ? orig.replace(/\r\n|\n$/, "").split(/\r\n|\n/) : [];
