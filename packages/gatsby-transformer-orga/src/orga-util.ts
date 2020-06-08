@@ -1,5 +1,5 @@
 import _ from 'lodash/fp'
-import { Parser } from 'orga'
+import { Parser } from './orga-parser'
 import { selectAll } from 'unist-util-select'
 
 export const getProperties = headline => {
